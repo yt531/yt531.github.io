@@ -1,6 +1,6 @@
 # Site settings
-title: Allen Blog
-SEOTitle: Allen的部落格 | Allen Blog
+title: Allen's Blog
+SEOTitle: Allen的部落格 | Allen's Blog
 header-img: img/home-bg.jpg
 email: huxpro@gmail.com
 description: "这里是 @Hux黄玄 的个人博客，与你一起发现更大的世界 | 要做一个有 swag 的程序员"
@@ -16,7 +16,7 @@ RSS: false
 #weibo_username: huxpro
 #zhihu_username: huxpro
 github_username: allen5218
-twitter_username: huxpro
+# twitter_username: huxpro
 #facebook_username:  huxpro
 linkedin_username:  allen-chang-168934377
 
@@ -59,7 +59,7 @@ kramdown:
       start_line: 1
 
 # Disqus settings
-disqus_username: hux
+disqus_username: allen5218
 
 # Netease settings
 netease_comment: false
@@ -70,7 +70,7 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me
+ga_domain: huangxuan.me # 原本是huangxuan.me，要改成blog.allenspace.dpdns.org
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
@@ -86,17 +86,18 @@ chrome-tab-theme-color: "#000000"
 service-worker: true
 
 # MathJax rendering for layout:page (e.g. post preview)
-page-mathjax: false
+page-mathjax: true
 
 # Friends
 friends:
   [
-    { title: "乱序（Midare）", href: "http://mida.re/" },
-    { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
-    { title: "Kun Qian", href: "http://kunq.me" },
-    { title: "Sherry Woo", href: "https://sherrywoo.me/" },
-    { title: "SmdCn", href: "http://blog.smdcn.net" },
-    { title: "JiyinYiyong", href: "http://tiye.me/" },
-    { title: "DHong Say", href: "http://dhong.co" },
-    { title: "尹峰以为", href: "http://ingf.github.io/" },
+    # { title: "乱序（Midare）", href: "http://mida.re/" },
+    # { title: "Ebn Zhang", href: "https://ebnbin.dev/" },
+    # { title: "Kun Qian", href: "http://kunq.me" },
+    # { title: "Sherry Woo", href: "https://sherrywoo.me/" },
+    # { title: "SmdCn", href: "http://blog.smdcn.net" },
+    # { title: "JiyinYiyong", href: "http://tiye.me/" },
+    # { title: "DHong Say", href: "http://dhong.co" },
+    # { title: "尹峰以为", href: "http://ingf.github.io/" },
+    { title: "Hux Blog", href: "http://huangxuan.me/" },
   ]
