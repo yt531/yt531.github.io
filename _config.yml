@@ -69,8 +69,8 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-ga_domain: huangxuan.me # 原本是huangxuan.me，要改成blog.allenspace.dpdns.org
+# ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
+# ga_domain: huangxuan.me # 原本是huangxuan.me，要改成blog.allenspace.dpdns.org
 
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
