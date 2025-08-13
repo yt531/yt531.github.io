@@ -3,6 +3,7 @@ layout:     post
 title:      "Hello 2025"
 subtitle:   " \"Just a test\""
 date:       2025-08-11 12:00:00
+mermaid:    true
 author:     "Hux"
 header-img: "img/post-bg-2015.jpg"
 catalog: true
@@ -68,74 +69,63 @@ This project is generously sponsored by ZMTO. Visit their website: [https://zmto
 
 ```mermaid
 graph TD
-    subgraph "用户端 (User End)"
-        User["用户 (User)"]
-        WebUI["Web UI (Browser)"]
-        API_Client["API 客户端 (API Client)"]
-    end
-
-    subgraph "启动与配置 (Launch & Config)"
-        GUI_Launch["gui_launcher.py (图形启动器)"]
-        CLI_Launch["launch_camoufox.py (命令行启动)"]
-        EnvConfig[".env (统一配置)"]
-        KeyFile["key.txt (API Keys)"]
-        ConfigDir["config/ (配置模块)"]
-    end
-
-    subgraph "核心应用 (Core Application)"
-        FastAPI_App["api_utils/app.py (FastAPI 应用)"]
-        Routes["api_utils/routes.py (路由处理)"]
-        RequestProcessor["api_utils/request_processor.py (请求处理)"]
-        AuthUtils["api_utils/auth_utils.py (认证管理)"]
-        PageController["browser_utils/page_controller.py (页面控制)"]
-        ScriptManager["browser_utils/script_manager.py (脚本注入)"]
-        ModelManager["browser_utils/model_management.py (模型管理)"]
-        StreamProxy["stream/ (流式代理服务器)"]
-    end
-
-    subgraph "外部依赖 (External Dependencies)"
-        CamoufoxInstance["Camoufox 浏览器 (反指纹)"]
-        AI_Studio["Google AI Studio"]
-        UserScript["油猴脚本 (可选)"]
-    end
-
-    User -- "运行 (Run)" --> GUI_Launch
-    User -- "运行 (Run)" --> CLI_Launch
-    User -- "访问 (Access)" --> WebUI
-
-    GUI_Launch -- "启动 (Starts)" --> CLI_Launch
-    CLI_Launch -- "启动 (Starts)" --> FastAPI_App
-    CLI_Launch -- "配置 (Configures)" --> StreamProxy
-
-    API_Client -- "API 请求 (Request)" --> FastAPI_App
-    WebUI -- "聊天请求 (Chat Request)" --> FastAPI_App
-
-    FastAPI_App -- "读取配置 (Reads Config)" --> EnvConfig
-    FastAPI_App -- "使用路由 (Uses Routes)" --> Routes
-    AuthUtils -- "验证密钥 (Validates Key)" --> KeyFile
-    ConfigDir -- "提供设置 (Provides Settings)" --> EnvConfig
-
-    Routes -- "处理请求 (Processes Request)" --> RequestProcessor
-    Routes -- "认证管理 (Auth Management)" --> AuthUtils
-    RequestProcessor -- "控制浏览器 (Controls Browser)" --> PageController
-    RequestProcessor -- "通过代理 (Uses Proxy)" --> StreamProxy
-
-    PageController -- "模型管理 (Model Management)" --> ModelManager
-    PageController -- "脚本注入 (Script Injection)" --> ScriptManager
-    ScriptManager -- "加载脚本 (Loads Script)" --> UserScript
-    ScriptManager -- "增强功能 (Enhances)" --> CamoufoxInstance
-    PageController -- "自动化 (Automates)" --> CamoufoxInstance
-    CamoufoxInstance -- "访问 (Accesses)" --> AI_Studio
-    StreamProxy -- "转发请求 (Forwards Request)" --> AI_Studio
-
-    AI_Studio -- "响应 (Response)" --> CamoufoxInstance
-    AI_Studio -- "响应 (Response)" --> StreamProxy
-
-    CamoufoxInstance -- "返回数据 (Returns Data)" --> PageController
-    StreamProxy -- "返回数据 (Returns Data)" --> RequestProcessor
-
-    FastAPI_App -- "API 响应 (Response)" --> API_Client
-    FastAPI_App -- "UI 响应 (Response)" --> WebUI
+    %% 用户端 (User End)
+    User[用户 User]
+    WebUI[Web UI Browser]
+    API_Client[API 客户端 API Client]
+    
+    %% 启动与配置 (Launch & Config)
+    GUI_Launch[gui_launcher.py 图形启动器]
+    CLI_Launch[launch_camoufox.py 命令行启动]
+    EnvConfig[.env 统一配置]
+    KeyFile[key.txt API Keys]
+    ConfigDir[config/ 配置模块]
+    
+    %% 核心应用 (Core Application)
+    FastAPI_App[api_utils/app.py FastAPI 应用]
+    Routes[api_utils/routes.py 路由处理]
+    RequestProcessor[api_utils/request_processor.py 请求处理]
+    AuthUtils[api_utils/auth_utils.py 认证管理]
+    PageController[browser_utils/page_controller.py 页面控制]
+    ScriptManager[browser_utils/script_manager.py 脚本注入]
+    ModelManager[browser_utils/model_management.py 模型管理]
+    StreamProxy[stream/ 流式代理服务器]
+    
+    %% 外部依赖 (External Dependencies)
+    CamoufoxInstance[Camoufox 浏览器 反指纹]
+    AI_Studio[Google AI Studio]
+    UserScript[油猴脚本 可选]
+    
+    %% 连接关系
+    User --> GUI_Launch
+    User --> CLI_Launch
+    User --> WebUI
+    GUI_Launch --> CLI_Launch
+    CLI_Launch --> FastAPI_App
+    CLI_Launch --> StreamProxy
+    API_Client --> FastAPI_App
+    WebUI --> FastAPI_App
+    FastAPI_App --> EnvConfig
+    FastAPI_App --> Routes
+    AuthUtils --> KeyFile
+    ConfigDir --> EnvConfig
+    Routes --> RequestProcessor
+    Routes --> AuthUtils
+    RequestProcessor --> PageController
+    RequestProcessor --> StreamProxy
+    PageController --> ModelManager
+    PageController --> ScriptManager
+    ScriptManager --> UserScript
+    ScriptManager --> CamoufoxInstance
+    PageController --> CamoufoxInstance
+    CamoufoxInstance --> AI_Studio
+    StreamProxy --> AI_Studio
+    AI_Studio --> CamoufoxInstance
+    AI_Studio --> StreamProxy
+    CamoufoxInstance --> PageController
+    StreamProxy --> RequestProcessor
+    FastAPI_App --> API_Client
+    FastAPI_App --> WebUI
 ```
 
 ## 配置管理 ⭐
