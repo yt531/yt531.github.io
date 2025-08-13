@@ -2,7 +2,7 @@
 layout:     post
 title:      "轉載-Typora下使用LaTex公式，Jekyll使用Mathjax显示公式"
 subtitle:   "Markdown,blog"
-date:       2021-04-30
+date:       2025-08-13
 author:     "elmagnifico"
 header-img: "img/bg7.jpg"
 catalog:    true
@@ -15,7 +15,7 @@ tags:
     - Mathjax
 ---
 
-> “轉載自Elmagnifico's Blog <br> 原文地址是https://github.elmagnifico.tech/2021/04/30/Typora-LaTex-Mathjax/”
+> 轉載自Elmagnifico's Blog <br> 原文地址是https://github.elmagnifico.tech/2021/04/30/Typora-LaTex-Mathjax/
 
 ## Foreword
 
