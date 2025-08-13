@@ -3,6 +3,7 @@ layout:     post
 title:      "Hello 2025"
 subtitle:   " \"Just a test\""
 date:       2025-08-11 12:00:00
+update:    2025-08-13 12:00:00
 mermaid:    true
 author:     "Hux"
 header-img: "img/post-bg-2015.jpg"
