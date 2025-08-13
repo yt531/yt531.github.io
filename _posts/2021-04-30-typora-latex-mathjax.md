@@ -7,7 +7,7 @@ update:     2021-04-30
 author:     "elmagnifico"
 header-img: "img/bg7.jpg"
 catalog:    true
-mathjax:    true
+mathjax:    false
 tags:
     - Blog
 ---
