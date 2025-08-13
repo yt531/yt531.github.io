@@ -15,7 +15,7 @@ tags:
     - Mathjax
 ---
 
-> Posted by elmagnifico on April 30, 2021<br> 轉載自Elmagnifico's Blog 原文地址是https://github.elmagnifico.tech/2021/04/30/Typora-LaTex-Mathjax/
+> 轉載自Elmagnifico's Blog <br> 原文地址是https://github.elmagnifico.tech/2021/04/30/Typora-LaTex-Mathjax/
 
 ## Foreword
 
