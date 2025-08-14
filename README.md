@@ -84,6 +84,8 @@ header-style: text
 ```yml
 mathjax: true
 ```
+詳細可以看這裡 
+> http://github.elmagnifico.tech/2021/04/30/Typora-LaTex-Mathjax/
 
 3. 開啟 Mermaid 8.0.0 圖表支援：
 
