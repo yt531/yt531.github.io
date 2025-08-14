@@ -73,7 +73,7 @@ rake post title="Hello 2015" subtitle="Hello World, Hello Blog"
 
 #### 進階配置：
 
-1. 使用*文字樣式*標題，如[這個範例](https://huangxuan.me/2019/09/08/spacemacs-workflow/)：
+1. 使用*文字樣式*標題，如[這個範例](https://huangxuan.me/2020/04/03/react-hooks-vue-composition/#%E5%BC%95%E8%A8%80)：
 
 ```yml
 header-style: text 
