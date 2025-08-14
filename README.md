@@ -133,6 +133,6 @@ iframe:     "http://huangxuan.me/js-module-7day/"
 
 Apache License 2.0.
 
-Copyright (c) 2025-present Allen
+Copyright (c) 2025-present allen5218
 
 Allen's Blog is derived from [Hux Pro (Apache License 2.0)](https://github.com/huxpro/huxpro.github.io) Copyright (c) 2015-present Huxpro
