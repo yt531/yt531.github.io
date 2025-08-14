@@ -103,6 +103,25 @@ update: 2023-12-01 10:30:00
 
 使用 `update` 欄位可以記錄文章的最後更新時間。
 
+### 使用Keynote
+
+![](http://huangxuan.me/img/blog-keynote.jpg)
+
+使用網頁技術（如 Reveal.js、Impress.js、Slides、Prezi 等）來製作主題演講和簡報的趨勢日益增長。我認為現代部落格應該支援嵌入這些基於 HTML 的簡報。
+
+使用方法，在markdown的**前置內容**中：
+
+```yml
+---
+layout:     keynote
+iframe:     "http://huangxuan.me/js-module-7day/"
+---
+```
+
+`iframe` 元素會自動調整大小以適應不同的外觀尺寸和設備方向。
+
+由於大多數主題演講框架會阻止瀏覽器的預設滾動行為，因此設定了底部內留白來幫助使用者，並提示使用者下方可能還有更多內容。
+
 ## 鳴謝
 
 本項目基於 Hux Pro 的項目修改，同時參考了 elmagnifico 的項目。
