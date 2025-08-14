@@ -71,7 +71,7 @@ rake post title="Hello 2015" subtitle="Hello World, Hello Blog"
 
 這個命令會自動在 `_posts/` 目錄下生成一個類似於上面的示例文章。
 
-這裡有一些進階配置：
+進階配置：
 
 1. 使用*文字樣式*標題，如[這個範例](https://huangxuan.me/2019/09/08/spacemacs-workflow/)：
 
