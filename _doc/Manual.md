@@ -230,7 +230,7 @@ From V1.5, Google Analytics and Baidu Tongji are supported with a simple config 
 ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 
 # Google Analytics
-ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
+ga_track_id: 'G-xxxxxxxxxx'            # GA4 Format: G-xxxxxxxxxx
 ga_domain: huangxuan.me
 ```
 

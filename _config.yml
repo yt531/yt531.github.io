@@ -69,9 +69,9 @@ netease_comment: false
 # ba_track_id: [your track id]
 
 # Google Analytics
-# ga_track_id: "UA-49627206-1" # Format: UA-xxxxxx-xx
-# ga_domain: blog.allenspace.dpdns.org # 原本是huangxuan.me，要改成blog.allenspace.dpdns.org
-# 舊的 UA 格式  google_analytics: UA-xxxxxx-xx
+ga_track_id: "G-M2HR0MGKVL" # GA4 Format: G-xxxxxxxxxx
+ga_domain: blog.allenspace.dpdns.org
+# 舊的 UA 格式  google_analytics: UA-xxxxxx-xx  
 # 新的 GA4 格式  google_analytics: G-xxxxxxxxxx
 
 # Sidebar settings
