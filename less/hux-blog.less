@@ -1128,15 +1128,19 @@ img::-moz-selection {
     background-color: @brand-primary;
     border: 1px solid @brand-primary;
   }
+  
+  &:hover i,
+  &:focus i {
+    color: white;
+  }
 }
 
 #back-top i {
   font-size: 20px;
   line-height: 38px;
   vertical-align: top;
-  -webkit-text-stroke: 1px #bfbfbf;
-  text-stroke: 1px #bfbfbf;
-  color: transparent;
+  color: #bfbfbf;
+  transition: color 0.3s ease;
 }
 
 @media only screen and (max-width: 768px) {

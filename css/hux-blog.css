@@ -1722,13 +1722,16 @@ img::-moz-selection {
   background-color: #0085a1;
   border: 1px solid #0085a1;
 }
+#back-top a:hover i,
+#back-top a:focus i {
+  color: white;
+}
 #back-top i {
   font-size: 20px;
   line-height: 38px;
   vertical-align: top;
-  -webkit-text-stroke: 1px #bfbfbf;
-  text-stroke: 1px #bfbfbf;
-  color: transparent;
+  color: #bfbfbf;
+  transition: color 0.3s ease;
 }
 @media only screen and (max-width: 768px) {
   #back-top {
