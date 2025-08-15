@@ -1730,6 +1730,6 @@ img::-moz-selection {
 }
 @media only screen and (max-width: 768px) {
   #back-top {
-    right: 0;
+    right: 20px;
   }
 }
