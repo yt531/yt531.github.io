@@ -81,4 +81,21 @@ jQuery(document).ready(function($) {
                 }
             });
     }
+
+    // Back to Top Button functionality
+    $('#back-top').hide();
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 250) {
+            $('#back-top').fadeIn();
+        } else {
+            $('#back-top').fadeOut();
+        }
+    });
+    
+    $('#back-top a').click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 800);
+        return false;
+    });
 });

@@ -1102,3 +1102,43 @@ img::-moz-selection {
 .no-scroll {
   overflow-y: hidden;
 }
+
+// Back to Top Button
+#back-top {
+  position: fixed;
+  bottom: 110px;
+  right: 4%;
+}
+
+#back-top a {
+  background-color: white;
+  border: 1px solid @gray-dark;
+  border-radius: 0;
+  width: 40px;
+  height: 40px;
+  display: block;
+  color: @gray-dark;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  
+  &:hover,
+  &:focus {
+    color: white;
+    background-color: @brand-primary;
+    border: 1px solid @brand-primary;
+  }
+}
+
+#back-top i {
+  font-size: 20px;
+  line-height: 38px;
+  vertical-align: top;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 768px) {
+  #back-top {
+    right: 0;
+  }
+}
