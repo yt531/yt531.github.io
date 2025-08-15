@@ -1726,7 +1726,9 @@ img::-moz-selection {
   font-size: 20px;
   line-height: 38px;
   vertical-align: top;
-  font-weight: 100;
+  -webkit-text-stroke: 1px #bfbfbf;
+  text-stroke: 1px #bfbfbf;
+  color: transparent;
 }
 @media only screen and (max-width: 768px) {
   #back-top {
