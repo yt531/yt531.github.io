@@ -26,7 +26,7 @@
 
 如何使用 GitHub Pages，如何快速配置請參考：https://youtu.be/YVj3JKMH9p8?si=DZ1mAXQKB6QApnef
 
-更詳細的配置請參考：https://github.com/qiubaiying/qiubaiying.github.io
+更詳細的配置請參考： [https://github.com/qiubaiying/qiubaiying.github.io/wiki](https://github.com/qiubaiying/qiubaiying.github.io/wiki/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA%E8%AF%A6%E7%BB%86%E6%95%99%E7%A8%8B)
 
 ### 要修改以下檔案的內容
 
