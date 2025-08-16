@@ -532,6 +532,9 @@ pre.highlight {
   word-wrap: normal;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
 }
 .highlighter-rouge .highlight .rouge-table .rouge-gutter,
 .highlighter-rouge .highlight .rouge-table .rouge-code {
@@ -539,6 +542,9 @@ pre.highlight {
 }
 .highlighter-rouge .highlight .rouge-code pre {
   color: #abb2bf;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
 }
 .highlighter-rouge .highlight .table-responsive {
   margin: 0px;
@@ -575,6 +581,9 @@ pre.highlight {
   }
   .highlighter-rouge .highlight table > tbody > tr > td > pre {
     padding: 14px 10px;
+    tab-size: 4;
+    -moz-tab-size: 4;
+    -o-tab-size: 4;
   }
 }
 .search-page {
@@ -776,6 +785,9 @@ pre code {
   width: auto;
   white-space: pre;
   word-wrap: normal;
+  tab-size: 4;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
 }
 .highlight pre {
   overflow-x: auto;

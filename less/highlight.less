@@ -223,6 +223,9 @@ pre.highlight {
     word-wrap: normal; // Safari Bug
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    tab-size: 4; // Consistent tab width for better alignment
+    -moz-tab-size: 4; // Firefox support
+    -o-tab-size: 4; // Opera support
   }
   .rouge-table {
     .rouge-gutter,
@@ -233,6 +236,9 @@ pre.highlight {
   .rouge-code {
     pre {
       color: #abb2bf; // default color for nil-lang code
+      tab-size: 4; // Consistent tab width for better alignment
+      -moz-tab-size: 4; // Firefox support
+      -o-tab-size: 4; // Opera support
     }
   }
   .table-responsive {
@@ -273,6 +279,9 @@ pre.highlight {
     }
     table > tbody > tr > td > pre {
       padding: 14px 10px;
+      tab-size: 4; // Consistent tab width for better alignment
+      -moz-tab-size: 4; // Firefox support
+      -o-tab-size: 4; // Opera support
     }
   }
 }
