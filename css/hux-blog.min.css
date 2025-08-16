@@ -528,6 +528,8 @@ pre.highlight {
   margin: 0;
   padding: 0;
   word-wrap: normal;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 .highlighter-rouge .highlight .rouge-table .rouge-gutter,
 .highlighter-rouge .highlight .rouge-table .rouge-code {
@@ -772,6 +774,10 @@ pre code {
   width: auto;
   white-space: pre;
   word-wrap: normal;
+}
+.highlight pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 code,
 kbd,

@@ -137,6 +137,12 @@ pre code {
   white-space: pre; // save it but no-wrap;
   word-wrap: normal; // no-wrap
 }
+
+// Fix for code overflow on mobile devices
+.highlight pre {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
 code,
 kbd,
 pre,
