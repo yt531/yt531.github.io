@@ -475,6 +475,38 @@ footer .copyright a {
   }
 }
 
+// Pager (Previous/Next buttons) dark mode
+.pager {
+  li {
+    > a,
+    > span {
+      background-color: var(--post-bg) !important;
+      color: var(--text-color) !important;
+    }
+    
+    > a:hover,
+    > a:focus {
+      background-color: var(--post-link-hover) !important;
+      border-color: var(--post-link-hover) !important;
+      color: #ffffff !important;
+      
+      > span {
+        color: #ffffff !important;
+      }
+    }
+  }
+  
+  .disabled {
+    > a,
+    > a:hover,
+    > a:focus,
+    > span {
+      background-color: var(--tag-bg) !important;
+      color: var(--text-muted) !important;
+    }
+  }
+}
+
 // For pages with header-img (background image), keep tags white in both light and dark modes
 // This is controlled by the navbar-theme-excluded class added by dark-mode.js
 body.navbar-theme-excluded {

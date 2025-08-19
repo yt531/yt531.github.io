@@ -1043,6 +1043,28 @@ footer .copyright a:focus {
   background-color: var(--tag-hover-bg) !important;
   color: #ffffff !important;
 }
+.pager li > a,
+.pager li > span {
+  background-color: var(--post-bg) !important;
+  color: var(--text-color) !important;
+}
+.pager li > a:hover,
+.pager li > a:focus {
+  background-color: var(--post-link-hover) !important;
+  border-color: var(--post-link-hover) !important;
+  color: #ffffff !important;
+}
+.pager li > a:hover > span,
+.pager li > a:focus > span {
+  color: #ffffff !important;
+}
+.pager .disabled > a,
+.pager .disabled > a:hover,
+.pager .disabled > a:focus,
+.pager .disabled > span {
+  background-color: var(--tag-bg) !important;
+  color: var(--text-muted) !important;
+}
 body.navbar-theme-excluded .intro-header:not(.style-text) .tags a,
 body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag {
   border-color: rgba(255, 255, 255, 0.8) !important;
