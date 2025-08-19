@@ -36,7 +36,7 @@
 
 // Dark theme variables
 [data-theme="dark"] {
-  --bg-color: #1a1a1a;
+  --bg-color: #2d2d2d;
   --text-color: #e0e0e0;
   --text-muted: #888888;
   --nav-bg: transparent;
@@ -48,7 +48,7 @@
   --search-bg: #2d2d2d;
   --search-text: #e0e0e0;
   --search-icon: #e0e0e0;
-  --post-bg: #1a1a1a;
+  --post-bg: #2d2d2d;
   --post-text: #e0e0e0;
   --post-link: #4db8d1;
   --post-link-hover: #66c7e0;
@@ -72,18 +72,16 @@
 .theme-toggle {
   display: inline-block;
   position: relative;
-  width: 20px;
-  height: 20px;
   cursor: pointer;
-  margin-left: 10px;
+  text-decoration: none !important;
   
   .theme-icon {
+    font-size: 20px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 16px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
   }
   
   .sun-icon {
@@ -99,6 +97,47 @@
   &:hover .theme-icon {
     transform: translate(-50%, -50%) scale(1.1);
   }
+  
+  // Desktop alignment - match other nav items
+  @media only screen and (min-width: 768px) {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    vertical-align: middle;
+    
+    .theme-icon {
+      font-size: 20px;
+    }
+  }
+  
+  // Mobile alignment - match search icon
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+    text-align: center;
+    
+    .theme-icon {
+      position: static;
+      transform: none;
+      font-size: 20px;
+      display: inline-block;
+    }
+    
+    .sun-icon {
+      transform: none;
+    }
+    
+    .moon-icon {
+      transform: none;
+    }
+    
+    &:hover .theme-icon {
+      transform: scale(1.1);
+    }
+  }
 }
 
 [data-theme="dark"] .theme-toggle {
@@ -110,6 +149,19 @@
   .moon-icon {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+  }
+  
+  // Mobile responsive for dark mode
+  @media only screen and (max-width: 767px) {
+    .sun-icon {
+      opacity: 0;
+      transform: none;
+    }
+    
+    .moon-icon {
+      opacity: 1;
+      transform: none;
+    }
   }
 }
 
@@ -372,6 +424,36 @@ footer .copyright a {
   .navbar-default .navbar-collapse {
     background: var(--bg-color) !important;
     border: 1px solid var(--border-color) !important;
+  }
+  
+  // Fix mobile navbar colors for light mode
+  .navbar-custom {
+    .nav li a {
+      color: var(--text-color) !important;
+      &:hover,
+      &:focus {
+        color: var(--post-link-hover) !important;
+      }
+    }
+    
+    .theme-toggle .theme-icon {
+      color: var(--text-color) !important;
+    }
+    
+    // Override invert class on mobile for light mode
+    &.invert {
+      .nav li a {
+        color: var(--nav-invert-text) !important;
+        &:hover,
+        &:focus {
+          color: var(--nav-invert-text-hover) !important;
+        }
+      }
+      
+      .theme-toggle .theme-icon {
+        color: var(--nav-invert-text) !important;
+      }
+    }
   }
 }
 
