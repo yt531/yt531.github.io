@@ -291,6 +291,18 @@ article .post-container h2::before {
   display: none !important;
 }
 
+// Force white color for article page header tags
+article .intro-header .post-heading .tags a,
+article .intro-header .post-heading .tags .tag {
+  color: #ffffff !important;
+  &:hover,
+  &:focus,
+  &:active,
+  &:visited {
+    color: #ffffff !important;
+  }
+}
+
 // Navigation
 
 // materialize, mobile only

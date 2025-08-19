@@ -1360,6 +1360,20 @@ samp {
 article .post-container h2::before {
   display: none !important;
 }
+article .intro-header .post-heading .tags a,
+article .intro-header .post-heading .tags .tag {
+  color: #ffffff !important;
+}
+article .intro-header .post-heading .tags a:hover,
+article .intro-header .post-heading .tags .tag:hover,
+article .intro-header .post-heading .tags a:focus,
+article .intro-header .post-heading .tags .tag:focus,
+article .intro-header .post-heading .tags a:active,
+article .intro-header .post-heading .tags .tag:active,
+article .intro-header .post-heading .tags a:visited,
+article .intro-header .post-heading .tags .tag:visited {
+  color: #ffffff !important;
+}
 @media only screen and (max-width: 767px) {
   /**
    * Layout
