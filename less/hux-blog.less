@@ -291,15 +291,23 @@ article .post-container h2::before {
   display: none !important;
 }
 
-// Force white color for article page header tags
-article .intro-header .post-heading .tags a,
-article .intro-header .post-heading .tags .tag {
+// Force white color for article page header tags with maximum CSS specificity
+article.post-template .intro-header .container .row .post-heading .tags a.tag,
+article.post-template .intro-header .container .row .post-heading .tags a,
+article .intro-header .container .row .post-heading .tags a.tag,
+article .intro-header .container .row .post-heading .tags a,
+article .intro-header .post-heading .tags a.tag,
+article .intro-header .post-heading .tags a {
   color: #ffffff !important;
+  border-color: rgba(255, 255, 255, 0.8) !important;
+  
   &:hover,
   &:focus,
   &:active,
-  &:visited {
+  &:visited,
+  &:link {
     color: #ffffff !important;
+    border-color: white !important;
   }
 }
 
