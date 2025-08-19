@@ -714,6 +714,23 @@ samp {
   }
 }
 
+// Fix for long code lines in homepage post previews
+.postlist-container {
+  .post-content-preview {
+    // Ensure text wrapping and prevent overflow
+    word-wrap: break-word;
+    word-break: break-word;
+    overflow-wrap: break-word;
+    
+    // For very long single words or code snippets
+    @media only screen and (max-width: 768px) {
+      // More aggressive breaking on mobile
+      word-break: break-all;
+      line-height: 1.4;
+    }
+  }
+}
+
 // Sections
 
 .section-heading {
