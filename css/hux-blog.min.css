@@ -736,9 +736,13 @@ pre.highlight {
 .theme-toggle {
   position: relative;
   display: inline-block;
+  will-change: auto;
 }
 .theme-toggle .theme-text {
-  transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  will-change: opacity, transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 .theme-toggle .light-text {
   opacity: 1;
@@ -771,10 +775,12 @@ pre.highlight {
   position: absolute;
   left: 0;
   top: 0;
+  transform: scale(0.98) translateZ(0);
 }
 [data-theme="dark"] .theme-toggle .dark-text {
   opacity: 1;
   position: static;
+  transform: scale(1) translateZ(0);
 }
 @media only screen and (max-width: 767px) {
   [data-theme="dark"] .theme-toggle .light-text {
@@ -782,10 +788,12 @@ pre.highlight {
     left: 0;
     top: 0;
     width: 100%;
+    transform: scale(0.98) translateZ(0);
   }
   [data-theme="dark"] .theme-toggle .dark-text {
     position: static;
     width: auto;
+    transform: scale(1) translateZ(0);
   }
 }
 body {

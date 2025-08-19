@@ -10,6 +10,10 @@
     const THEME_KEY = 'blog-theme';
     const DARK_THEME = 'dark';
     const LIGHT_THEME = 'light';
+    
+    // Toggle state management
+    let isToggling = false;
+    const TOGGLE_COOLDOWN = 300;
 
     // Get elements
     function getElements() {
@@ -82,13 +86,27 @@
         updateDisqusTheme(theme);
     }
 
-    // Toggle theme
+    // Toggle theme with debounce protection
     function toggleTheme() {
+        // Prevent rapid consecutive toggles
+        if (isToggling) {
+            return;
+        }
+        
+        isToggling = true;
         const currentTheme = getCurrentTheme();
         const newTheme = currentTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
         
-        setTheme(newTheme);
-        applyConditionalTheme(newTheme);
+        // Use requestAnimationFrame for smooth transitions
+        requestAnimationFrame(() => {
+            setTheme(newTheme);
+            applyConditionalTheme(newTheme);
+            
+            // Reset toggle lock after cooldown
+            setTimeout(() => {
+                isToggling = false;
+            }, TOGGLE_COOLDOWN);
+        });
     }
 
     // Update Disqus theme
@@ -111,10 +129,26 @@
         }
     }
 
-    // Initialize theme on page load
+    // Initialize theme on page load - optimized to prevent flashing
     function initTheme() {
         const savedTheme = getCurrentTheme();
+        
+        // Temporarily hide theme toggle to prevent flash during init
+        const themeToggle = document.querySelector('.theme-toggle');
+        if (themeToggle) {
+            themeToggle.style.opacity = '0';
+        }
+        
+        // Apply theme immediately
         applyConditionalTheme(savedTheme);
+        
+        // Show theme toggle after applying theme
+        requestAnimationFrame(() => {
+            if (themeToggle) {
+                themeToggle.style.opacity = '';
+                themeToggle.style.transition = 'opacity 0.2s ease';
+            }
+        });
     }
 
     // Initialize when DOM is ready
