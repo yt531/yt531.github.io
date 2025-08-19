@@ -155,65 +155,6 @@ layout: default
 <script src="{{ "/js/catalog.js" | prepend: site.baseurl }}"></script>
 {% endunless %}
 
-<!-- Force white color for article page header tags -->
-<script>
-(function() {
-    'use strict';
-    
-    function forceTagColors() {
-        // Target article page header tags specifically
-        const headerTags = document.querySelectorAll('article .intro-header .post-heading .tags a');
-        
-        headerTags.forEach(function(tag) {
-            // Force white color with highest priority
-            tag.style.setProperty('color', '#ffffff', 'important');
-            tag.style.setProperty('border-color', 'rgba(255, 255, 255, 0.8)', 'important');
-            
-            // Handle hover states
-            tag.addEventListener('mouseenter', function() {
-                this.style.setProperty('color', '#ffffff', 'important');
-                this.style.setProperty('border-color', 'white', 'important');
-            });
-            
-            tag.addEventListener('mouseleave', function() {
-                this.style.setProperty('color', '#ffffff', 'important');
-                this.style.setProperty('border-color', 'rgba(255, 255, 255, 0.8)', 'important');
-            });
-        });
-    }
-    
-    // Run on page load
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', forceTagColors);
-    } else {
-        forceTagColors();
-    }
-    
-    // Re-run if theme changes (MutationObserver for theme switching)
-    const observer = new MutationObserver(function(mutations) {
-        mutations.forEach(function(mutation) {
-            if (mutation.type === 'attributes' && 
-                (mutation.attributeName === 'data-theme' || mutation.attributeName === 'class')) {
-                setTimeout(forceTagColors, 100); // Small delay to let theme apply
-            }
-        });
-    });
-    
-    // Observe theme changes on document element
-    observer.observe(document.documentElement, {
-        attributes: true,
-        attributeFilter: ['data-theme', 'class']
-    });
-    
-    // Also observe body for theme changes
-    if (document.body) {
-        observer.observe(document.body, {
-            attributes: true,
-            attributeFilter: ['class']
-        });
-    }
-})();
-</script>
 
 {% if site.anchorjs %}
 <!-- async load function -->

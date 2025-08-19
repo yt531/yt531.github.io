@@ -1360,48 +1360,6 @@ samp {
 article .post-container h2::before {
   display: none !important;
 }
-article.post-template .intro-header .container .row .post-heading .tags a.tag,
-article.post-template .intro-header .container .row .post-heading .tags a,
-article .intro-header .container .row .post-heading .tags a.tag,
-article .intro-header .container .row .post-heading .tags a,
-article .intro-header .post-heading .tags a.tag,
-article .intro-header .post-heading .tags a {
-  color: #ffffff !important;
-  border-color: rgba(255, 255, 255, 0.8) !important;
-}
-article.post-template .intro-header .container .row .post-heading .tags a.tag:hover,
-article.post-template .intro-header .container .row .post-heading .tags a:hover,
-article .intro-header .container .row .post-heading .tags a.tag:hover,
-article .intro-header .container .row .post-heading .tags a:hover,
-article .intro-header .post-heading .tags a.tag:hover,
-article .intro-header .post-heading .tags a:hover,
-article.post-template .intro-header .container .row .post-heading .tags a.tag:focus,
-article.post-template .intro-header .container .row .post-heading .tags a:focus,
-article .intro-header .container .row .post-heading .tags a.tag:focus,
-article .intro-header .container .row .post-heading .tags a:focus,
-article .intro-header .post-heading .tags a.tag:focus,
-article .intro-header .post-heading .tags a:focus,
-article.post-template .intro-header .container .row .post-heading .tags a.tag:active,
-article.post-template .intro-header .container .row .post-heading .tags a:active,
-article .intro-header .container .row .post-heading .tags a.tag:active,
-article .intro-header .container .row .post-heading .tags a:active,
-article .intro-header .post-heading .tags a.tag:active,
-article .intro-header .post-heading .tags a:active,
-article.post-template .intro-header .container .row .post-heading .tags a.tag:visited,
-article.post-template .intro-header .container .row .post-heading .tags a:visited,
-article .intro-header .container .row .post-heading .tags a.tag:visited,
-article .intro-header .container .row .post-heading .tags a:visited,
-article .intro-header .post-heading .tags a.tag:visited,
-article .intro-header .post-heading .tags a:visited,
-article.post-template .intro-header .container .row .post-heading .tags a.tag:link,
-article.post-template .intro-header .container .row .post-heading .tags a:link,
-article .intro-header .container .row .post-heading .tags a.tag:link,
-article .intro-header .container .row .post-heading .tags a:link,
-article .intro-header .post-heading .tags a.tag:link,
-article .intro-header .post-heading .tags a:link {
-  color: #ffffff !important;
-  border-color: white !important;
-}
 @media only screen and (max-width: 767px) {
   /**
    * Layout
