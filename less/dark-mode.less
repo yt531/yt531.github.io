@@ -478,8 +478,8 @@ footer .copyright a {
   }
 }
 
-// Intro header text style
-.intro-header.style-text {
+// Intro header text style - only apply to dark mode, let light mode use original styles
+[data-theme="dark"] .intro-header.style-text {
   .site-heading,
   .post-heading,
   .page-heading {

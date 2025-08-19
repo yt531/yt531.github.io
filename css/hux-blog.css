@@ -1044,20 +1044,20 @@ footer .copyright a:focus {
 .side-catalog .catalog-body li a:hover {
   color: var(--post-link-hover) !important;
 }
-.intro-header.style-text .site-heading,
-.intro-header.style-text .post-heading,
-.intro-header.style-text .page-heading {
+[data-theme="dark"] .intro-header.style-text .site-heading,
+[data-theme="dark"] .intro-header.style-text .post-heading,
+[data-theme="dark"] .intro-header.style-text .page-heading {
   color: var(--text-color) !important;
 }
-.intro-header.style-text .tags a,
-.intro-header.style-text .tags .tag {
+[data-theme="dark"] .intro-header.style-text .tags a,
+[data-theme="dark"] .intro-header.style-text .tags .tag {
   border-color: var(--text-color) !important;
   color: var(--text-color) !important;
 }
-.intro-header.style-text .tags a:hover,
-.intro-header.style-text .tags .tag:hover,
-.intro-header.style-text .tags a:active,
-.intro-header.style-text .tags .tag:active {
+[data-theme="dark"] .intro-header.style-text .tags a:hover,
+[data-theme="dark"] .intro-header.style-text .tags .tag:hover,
+[data-theme="dark"] .intro-header.style-text .tags a:active,
+[data-theme="dark"] .intro-header.style-text .tags .tag:active {
   background-color: var(--tag-hover-bg) !important;
   color: #ffffff !important;
 }
