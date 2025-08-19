@@ -1048,10 +1048,6 @@ body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag {
   border-color: rgba(255, 255, 255, 0.8) !important;
   color: #ffffff !important;
 }
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags a > sup,
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag > sup {
-  color: #ffffff !important;
-}
 body.navbar-theme-excluded .intro-header:not(.style-text) .tags a:hover,
 body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:hover,
 body.navbar-theme-excluded .intro-header:not(.style-text) .tags a:active,
@@ -1059,12 +1055,6 @@ body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:active {
   color: white !important;
   border-color: white !important;
   background-color: rgba(255, 255, 255, 0.4) !important;
-}
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags a:hover > sup,
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:hover > sup,
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags a:active > sup,
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:active > sup {
-  color: white !important;
 }
 body {
   /* Hux learn from
