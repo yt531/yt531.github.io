@@ -1581,16 +1581,14 @@ samp {
 }
 .intro-header.style-text .tags a,
 .intro-header.style-text .tags .tag {
-  border-color: rgba(255, 255, 255, 0.8);
-  color: #ffffff;
+  border-color: #404040;
+  color: #404040;
 }
 .intro-header.style-text .tags a:hover,
 .intro-header.style-text .tags .tag:hover,
 .intro-header.style-text .tags a:active,
 .intro-header.style-text .tags .tag:active {
-  color: white;
-  border-color: white;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.05);
 }
 @media only screen and (min-width: 768px) {
   .intro-header {
