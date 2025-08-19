@@ -792,6 +792,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
 }
 body.navbar-theme-excluded .navbar-custom .navbar-brand {
   color: white !important;
@@ -986,9 +987,6 @@ footer .copyright a:focus {
   color: var(--post-link-hover) !important;
 }
 @media only screen and (max-width: 767px) {
-  body {
-    overflow-x: hidden;
-  }
   .navbar-default .navbar-collapse {
     background: var(--bg-color) !important;
     border: 1px solid var(--border-color) !important;
