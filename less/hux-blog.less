@@ -920,6 +920,17 @@ img::-moz-selection {
   }
 }
 
+// Override general a tag color for intro-header tags specifically
+.intro-header .tags {
+  a, .tag {
+    color: rgba(255, 255, 255, 1) !important;
+    &:hover,
+    &:active {
+      color: white !important;
+    }
+  }
+}
+
 #tag-heading {
   padding: 70px 0 60px;
   @media only screen and (min-width: 768px) {
