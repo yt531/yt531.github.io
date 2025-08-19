@@ -342,13 +342,9 @@ table.table > thead {
   }
 }
 
-#back-top i {
-  color: var(--back-top-text) !important;
-  transition: color 0.3s ease;
-  
-  &:hover {
-    color: var(--back-top-hover-text) !important;
-  }
+#back-top a:hover i,
+#back-top a:focus i {
+  color: var(--back-top-hover-text) !important;
 }
 
 // Disqus dark mode support

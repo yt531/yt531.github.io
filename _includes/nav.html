@@ -20,6 +20,12 @@
             <div id="huxblog_navbar">
                 <div class="navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
+                        <li class="theme-toggle-li">
+                            <a href="javascript:void(0)" class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+                                <span class="theme-text dark-text">DARK</span>
+                                <span class="theme-text light-text">LIGHT</span>
+                            </a>
+                        </li>
                         <li>
                             <a href="{{ site.baseurl }}/">Home</a>
                         </li>
@@ -30,12 +36,6 @@
                         </li>
                         {% endif %}
                         {% endfor %}
-                        <li class="theme-toggle-li">
-                            <a href="javascript:void(0)" class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
-                                <span class="theme-text dark-text">DARK</span>
-                                <span class="theme-text light-text">LIGHT</span>
-                            </a>
-                        </li>
                         <li class="search-icon">
                             <a href="javascript:void(0)">
                                 <i class="fa fa-search"></i>
