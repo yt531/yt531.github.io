@@ -855,7 +855,7 @@ body.navbar-theme-excluded .navbar-custom.invert .nav li a:focus {
 }
 .navbar-custom.is-fixed {
   background-color: var(--bg-color) !important;
-  border-bottom: 1px solid var(--border-color) !important;
+  border-bottom: 1px solid #ffffff !important;
 }
 .navbar-custom.is-fixed .navbar-brand {
   color: var(--text-color) !important;
@@ -896,7 +896,7 @@ body.navbar-theme-excluded .navbar-custom.invert .nav li a:focus {
   color: var(--post-link-hover) !important;
 }
 .post-container h2::before {
-  border-bottom-color: var(--border-color) !important;
+  border-bottom-color: #ffffff !important;
 }
 .post-container h4,
 .post-container h5,
