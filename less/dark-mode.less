@@ -1,0 +1,419 @@
+// Dark Mode Variables and Styles
+
+// Light theme variables (default)
+:root {
+  --bg-color: #ffffff;
+  --text-color: #404040;
+  --text-muted: #a3a3a3;
+  --nav-bg: transparent;
+  --nav-text: #ffffff;
+  --nav-text-hover: rgba(255, 255, 255, 0.8);
+  --nav-invert-bg: transparent;
+  --nav-invert-text: #404040;
+  --nav-invert-text-hover: #0085a1;
+  --search-bg: #ffffff;
+  --search-text: #404040;
+  --search-icon: #311e3e;
+  --post-bg: #ffffff;
+  --post-text: #404040;
+  --post-link: #337ab7;
+  --post-link-hover: #0085a1;
+  --border-color: #ececec;
+  --table-border: #eee;
+  --blockquote-color: gray;
+  --tag-bg: #f3f5f5;
+  --tag-text: #404040;
+  --tag-hover-bg: #0085a1;
+  --back-top-bg: rgba(255, 255, 255, 0.7);
+  --back-top-border: #bfbfbf;
+  --back-top-text: #bfbfbf;
+  --back-top-hover-bg: #0085a1;
+  --back-top-hover-border: #0085a1;
+  --back-top-hover-text: #ffffff;
+  --disqus-bg: #ffffff;
+  --disqus-text: #404040;
+}
+
+// Dark theme variables
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --text-muted: #888888;
+  --nav-bg: transparent;
+  --nav-text: #e0e0e0;
+  --nav-text-hover: rgba(224, 224, 224, 0.8);
+  --nav-invert-bg: transparent;
+  --nav-invert-text: #e0e0e0;
+  --nav-invert-text-hover: #4db8d1;
+  --search-bg: #2d2d2d;
+  --search-text: #e0e0e0;
+  --search-icon: #e0e0e0;
+  --post-bg: #1a1a1a;
+  --post-text: #e0e0e0;
+  --post-link: #4db8d1;
+  --post-link-hover: #66c7e0;
+  --border-color: #333333;
+  --table-border: #333333;
+  --blockquote-color: #888888;
+  --tag-bg: #333333;
+  --tag-text: #e0e0e0;
+  --tag-hover-bg: #4db8d1;
+  --back-top-bg: rgba(45, 45, 45, 0.9);
+  --back-top-border: #555555;
+  --back-top-text: #e0e0e0;
+  --back-top-hover-bg: #4db8d1;
+  --back-top-hover-border: #4db8d1;
+  --back-top-hover-text: #ffffff;
+  --disqus-bg: #2d2d2d;
+  --disqus-text: #e0e0e0;
+}
+
+// Theme toggle button styles
+.theme-toggle {
+  display: inline-block;
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-left: 10px;
+  
+  .theme-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  .sun-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .moon-icon {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  
+  &:hover .theme-icon {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+[data-theme="dark"] .theme-toggle {
+  .sun-icon {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+  }
+  
+  .moon-icon {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+// Apply dark mode styles to main elements
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+// Exclude navbar from theme changes when navbar-theme-excluded class is present
+body.navbar-theme-excluded {
+  .navbar-custom {
+    .navbar-brand {
+      color: white !important;
+      &:hover,
+      &:focus {
+        color: rgba(255, 255, 255, 0.8) !important;
+      }
+    }
+    
+    .nav li a {
+      color: white !important;
+      &:hover,
+      &:focus {
+        color: rgba(255, 255, 255, 0.8) !important;
+      }
+    }
+    
+    &.invert {
+      .navbar-brand {
+        color: var(--nav-invert-text) !important;
+        &:hover,
+        &:focus {
+          color: var(--nav-invert-text-hover) !important;
+        }
+      }
+      
+      .nav li a {
+        color: var(--nav-invert-text) !important;
+        &:hover,
+        &:focus {
+          color: var(--nav-invert-text-hover) !important;
+        }
+      }
+    }
+  }
+}
+
+// Navigation styles for dark mode
+.navbar-custom {
+  .navbar-brand {
+    color: var(--nav-text) !important;
+    &:hover,
+    &:focus {
+      color: var(--nav-text-hover) !important;
+    }
+  }
+  
+  .nav li a {
+    color: var(--nav-text) !important;
+    &:hover,
+    &:focus {
+      color: var(--nav-text-hover) !important;
+    }
+  }
+  
+  &.invert {
+    .navbar-brand {
+      color: var(--nav-invert-text) !important;
+      &:hover,
+      &:focus {
+        color: var(--nav-invert-text-hover) !important;
+      }
+    }
+    
+    .nav li a {
+      color: var(--nav-invert-text) !important;
+      &:hover,
+      &:focus {
+        color: var(--nav-invert-text-hover) !important;
+      }
+    }
+    
+    .navbar-toggle .icon-bar {
+      background-color: var(--nav-invert-text) !important;
+    }
+  }
+  
+  // Fixed navbar dark mode styles
+  &.is-fixed {
+    background-color: var(--bg-color) !important;
+    border-bottom: 1px solid var(--border-color) !important;
+    
+    .navbar-brand {
+      color: var(--text-color) !important;
+      &:hover,
+      &:focus {
+        color: var(--post-link-hover) !important;
+      }
+    }
+    
+    .nav li a {
+      color: var(--text-color) !important;
+      &:hover,
+      &:focus {
+        color: var(--post-link-hover) !important;
+      }
+    }
+  }
+}
+
+// Search page dark mode
+.search-page {
+  background: var(--search-bg) !important;
+  
+  #search-input {
+    color: var(--search-text) !important;
+    background: var(--search-bg) !important;
+  }
+  
+  .search-icon-close {
+    color: var(--search-icon) !important;
+  }
+}
+
+.search-icon a {
+  color: var(--search-icon) !important;
+}
+
+// Post content dark mode
+.post-container {
+  background-color: var(--post-bg);
+  color: var(--post-text);
+  
+  a {
+    color: var(--post-link) !important;
+    &:hover,
+    &:focus {
+      color: var(--post-link-hover) !important;
+    }
+  }
+  
+  h2::before {
+    border-bottom-color: var(--border-color) !important;
+  }
+  
+  h4, h5, h6 {
+    color: var(--text-muted) !important;
+  }
+}
+
+// Main content areas
+a {
+  color: var(--text-color) !important;
+  &:hover,
+  &:focus {
+    color: var(--post-link-hover) !important;
+  }
+}
+
+// Blockquotes
+blockquote {
+  color: var(--blockquote-color) !important;
+}
+
+// Tables
+table.table > tbody,
+table.table > thead {
+  th, td {
+    border-color: var(--table-border) !important;
+  }
+}
+
+// Tags
+#tag_cloud {
+  a, .tag {
+    background: var(--tag-bg) !important;
+    color: var(--tag-text) !important;
+    
+    &:hover,
+    &:active,
+    &.focus {
+      background-color: var(--tag-hover-bg) !important;
+      color: #ffffff !important;
+    }
+  }
+}
+
+// Back to top button - Light mode: dark border, Dark mode: inverted
+#back-top a {
+  background-color: var(--back-top-bg) !important;
+  border-color: var(--back-top-border) !important;
+  color: var(--back-top-text) !important;
+  transition: all 0.3s ease;
+  
+  &:hover,
+  &:focus {
+    background-color: var(--back-top-hover-bg) !important;
+    border-color: var(--back-top-hover-border) !important;
+    color: var(--back-top-hover-text) !important;
+  }
+}
+
+#back-top i {
+  color: var(--back-top-text) !important;
+  transition: color 0.3s ease;
+  
+  &:hover {
+    color: var(--back-top-hover-text) !important;
+  }
+}
+
+// Disqus dark mode support
+#disqus_thread {
+  background-color: var(--disqus-bg) !important;
+  color: var(--disqus-text) !important;
+}
+
+// Post preview styles
+.post-preview {
+  > a {
+    color: var(--text-color) !important;
+    &:hover,
+    &:focus {
+      color: var(--post-link-hover) !important;
+    }
+  }
+  
+  > .post-meta {
+    color: var(--text-muted) !important;
+    > a {
+      color: var(--text-color) !important;
+      &:hover,
+      &:focus {
+        color: var(--post-link-hover) !important;
+      }
+    }
+  }
+}
+
+.post-content-preview {
+  color: var(--text-muted) !important;
+  &:hover {
+    color: var(--post-link-hover) !important;
+  }
+}
+
+// Footer
+footer .copyright a {
+  color: var(--post-link) !important;
+  &:hover,
+  &:focus {
+    color: var(--post-link-hover) !important;
+  }
+}
+
+// Mobile navbar
+@media only screen and (max-width: 767px) {
+  .navbar-default .navbar-collapse {
+    background: var(--bg-color) !important;
+    border: 1px solid var(--border-color) !important;
+  }
+}
+
+// Side catalog
+.side-catalog {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  
+  h5 a {
+    color: var(--text-color) !important;
+    &:hover {
+      color: var(--post-link-hover) !important;
+    }
+  }
+  
+  .catalog-body {
+    li a {
+      color: var(--text-color) !important;
+      &:hover {
+        color: var(--post-link-hover) !important;
+      }
+    }
+  }
+}
+
+// Intro header text style
+.intro-header.style-text {
+  .site-heading,
+  .post-heading,
+  .page-heading {
+    color: var(--text-color) !important;
+  }
+  
+  .tags {
+    a, .tag {
+      border-color: var(--text-color) !important;
+      color: var(--text-color) !important;
+      &:hover,
+      &:active {
+        background-color: var(--tag-hover-bg) !important;
+        color: #ffffff !important;
+      }
+    }
+  }
+}

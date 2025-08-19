@@ -20,6 +20,16 @@
     }
     {% endif %}
 </style>
+
+<!-- Pass page front matter variables to JavaScript for dark mode logic -->
+<script>
+    {% if page.header-img %}
+    window.pageHeaderImg = '{{ page.header-img }}';
+    {% endif %}
+    {% if page.header-style %}
+    window.pageHeaderStyle = '{{ page.header-style }}';
+    {% endif %}
+</script>
 {% endif %}
 <!--舊版，沒有update on邏輯
 {% if include.type == 'post' %}

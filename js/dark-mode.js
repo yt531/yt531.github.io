@@ -1,0 +1,147 @@
+/**
+ * Dark Mode Toggle Functionality
+ * Handles theme switching between light and dark modes
+ */
+
+(function() {
+    'use strict';
+
+    // Theme storage key
+    const THEME_KEY = 'blog-theme';
+    const DARK_THEME = 'dark';
+    const LIGHT_THEME = 'light';
+
+    // Get elements
+    function getElements() {
+        return {
+            body: document.body,
+            navbar: document.querySelector('.navbar-custom'),
+            themeToggle: document.querySelector('.theme-toggle')
+        };
+    }
+
+    // Get current theme from localStorage or default to dark
+    function getCurrentTheme() {
+        return localStorage.getItem(THEME_KEY) || DARK_THEME;
+    }
+
+    // Set theme in localStorage
+    function setTheme(theme) {
+        localStorage.setItem(THEME_KEY, theme);
+    }
+
+    // Apply theme to document
+    function applyTheme(theme) {
+        const elements = getElements();
+        
+        if (theme === DARK_THEME) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+        }
+        
+        // Update Disqus theme if present
+        updateDisqusTheme(theme);
+    }
+
+    // Check if current page should skip navbar theme switching
+    function shouldSkipNavbarTheme() {
+        // Get page front matter variables
+        const hasHeaderImg = window.pageHeaderImg !== undefined && window.pageHeaderImg !== '';
+        const hasHeaderStyleText = window.pageHeaderStyle === 'text';
+        
+        // If header-img is set, skip navbar theme switching
+        // If header-style: text is set, apply navbar theme switching
+        return hasHeaderImg && !hasHeaderStyleText;
+    }
+
+    // Apply conditional theme logic based on page front matter
+    function applyConditionalTheme(theme) {
+        const elements = getElements();
+        
+        if (shouldSkipNavbarTheme()) {
+            // Only apply theme to content areas, not navbar
+            applyContentTheme(theme);
+        } else {
+            // Apply theme to all areas including navbar
+            applyTheme(theme);
+        }
+    }
+
+    // Apply theme only to content areas (excluding navbar)
+    function applyContentTheme(theme) {
+        if (theme === DARK_THEME) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+            // Add a class to indicate navbar should be excluded
+            document.body.classList.add('navbar-theme-excluded');
+        } else {
+            document.documentElement.removeAttribute('data-theme');
+            document.body.classList.remove('navbar-theme-excluded');
+        }
+        
+        updateDisqusTheme(theme);
+    }
+
+    // Toggle theme
+    function toggleTheme() {
+        const currentTheme = getCurrentTheme();
+        const newTheme = currentTheme === DARK_THEME ? LIGHT_THEME : DARK_THEME;
+        
+        setTheme(newTheme);
+        applyConditionalTheme(newTheme);
+    }
+
+    // Update Disqus theme
+    function updateDisqusTheme(theme) {
+        // Disqus theme updating
+        if (window.DISQUS) {
+            try {
+                // Reload Disqus with new theme
+                window.DISQUS.reset({
+                    reload: true,
+                    config: function () {
+                        this.page.url = window.location.href;
+                        this.page.identifier = window.disqus_identifier || window.location.pathname;
+                        // Disqus doesn't have built-in dark mode, but we can style it via CSS
+                    }
+                });
+            } catch (e) {
+                console.log('Disqus theme update failed:', e);
+            }
+        }
+    }
+
+    // Initialize theme on page load
+    function initTheme() {
+        const savedTheme = getCurrentTheme();
+        applyConditionalTheme(savedTheme);
+    }
+
+    // Initialize when DOM is ready
+    function init() {
+        // Set default theme to dark and initialize
+        if (!localStorage.getItem(THEME_KEY)) {
+            setTheme(DARK_THEME);
+        }
+        
+        initTheme();
+        
+        // Make toggleTheme globally available
+        window.toggleTheme = toggleTheme;
+    }
+
+    // Run initialization
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+
+    // Handle page navigation (for single-page apps or dynamic content)
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted) {
+            initTheme();
+        }
+    });
+
+})();
