@@ -68,16 +68,17 @@
   --disqus-text: #e0e0e0;
 }
 
-// Theme toggle button styles
+// Theme toggle button styles - matching search icon behavior
 .theme-toggle {
-  display: inline-block;
-  position: relative;
   cursor: pointer;
   text-decoration: none !important;
+  color: inherit;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
   
   .theme-icon {
     font-size: 20px;
-    transition: opacity 0.3s ease, transform 0.3s ease;
+    transition: opacity 0.3s ease;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -86,38 +87,31 @@
   
   .sun-icon {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
   }
   
   .moon-icon {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.8);
   }
   
-  &:hover .theme-icon {
-    transform: translate(-50%, -50%) scale(1.1);
+  &:hover {
+    opacity: 0.8;
   }
   
-  // Desktop alignment - match other nav items
+  // Desktop - no specific sizing, let it scale naturally
   @media only screen and (min-width: 768px) {
-    width: 20px;
-    height: 20px;
-    margin-left: 15px;
-    vertical-align: middle;
+    position: relative;
+    display: inline-block;
     
     .theme-icon {
       font-size: 20px;
     }
   }
   
-  // Mobile alignment - match search icon
+  // Mobile - match search icon styling
   @media only screen and (max-width: 767px) {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
     display: block;
     text-align: center;
+    font-size: 16px;
     
     .theme-icon {
       position: static;
@@ -125,43 +119,16 @@
       font-size: 20px;
       display: inline-block;
     }
-    
-    .sun-icon {
-      transform: none;
-    }
-    
-    .moon-icon {
-      transform: none;
-    }
-    
-    &:hover .theme-icon {
-      transform: scale(1.1);
-    }
   }
 }
 
 [data-theme="dark"] .theme-toggle {
   .sun-icon {
     opacity: 0;
-    transform: translate(-50%, -50%) scale(0.8);
   }
   
   .moon-icon {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1);
-  }
-  
-  // Mobile responsive for dark mode
-  @media only screen and (max-width: 767px) {
-    .sun-icon {
-      opacity: 0;
-      transform: none;
-    }
-    
-    .moon-icon {
-      opacity: 1;
-      transform: none;
-    }
   }
 }
 

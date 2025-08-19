@@ -734,14 +734,15 @@ pre.highlight {
   --disqus-text: #e0e0e0;
 }
 .theme-toggle {
-  display: inline-block;
-  position: relative;
   cursor: pointer;
   text-decoration: none !important;
+  color: inherit;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 .theme-toggle .theme-icon {
   font-size: 20px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.3s ease;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -749,21 +750,17 @@ pre.highlight {
 }
 .theme-toggle .sun-icon {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
 }
 .theme-toggle .moon-icon {
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.8);
 }
-.theme-toggle:hover .theme-icon {
-  transform: translate(-50%, -50%) scale(1.1);
+.theme-toggle:hover {
+  opacity: 0.8;
 }
 @media only screen and (min-width: 768px) {
   .theme-toggle {
-    width: 20px;
-    height: 20px;
-    margin-left: 15px;
-    vertical-align: middle;
+    position: relative;
+    display: inline-block;
   }
   .theme-toggle .theme-icon {
     font-size: 20px;
@@ -771,12 +768,9 @@ pre.highlight {
 }
 @media only screen and (max-width: 767px) {
   .theme-toggle {
-    width: 100%;
-    height: auto;
-    margin: 0;
-    padding: 0;
     display: block;
     text-align: center;
+    font-size: 16px;
   }
   .theme-toggle .theme-icon {
     position: static;
@@ -784,33 +778,12 @@ pre.highlight {
     font-size: 20px;
     display: inline-block;
   }
-  .theme-toggle .sun-icon {
-    transform: none;
-  }
-  .theme-toggle .moon-icon {
-    transform: none;
-  }
-  .theme-toggle:hover .theme-icon {
-    transform: scale(1.1);
-  }
 }
 [data-theme="dark"] .theme-toggle .sun-icon {
   opacity: 0;
-  transform: translate(-50%, -50%) scale(0.8);
 }
 [data-theme="dark"] .theme-toggle .moon-icon {
   opacity: 1;
-  transform: translate(-50%, -50%) scale(1);
-}
-@media only screen and (max-width: 767px) {
-  [data-theme="dark"] .theme-toggle .sun-icon {
-    opacity: 0;
-    transform: none;
-  }
-  [data-theme="dark"] .theme-toggle .moon-icon {
-    opacity: 1;
-    transform: none;
-  }
 }
 body {
   background-color: var(--bg-color);
