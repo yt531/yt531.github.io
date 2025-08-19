@@ -474,3 +474,22 @@ footer .copyright a {
     }
   }
 }
+
+// For pages with header-img (background image), keep tags white in both light and dark modes
+// This is controlled by the navbar-theme-excluded class added by dark-mode.js
+body.navbar-theme-excluded {
+  .intro-header:not(.style-text) {
+    .tags {
+      a, .tag {
+        border-color: rgba(255, 255, 255, 0.8) !important;
+        color: rgba(255, 255, 255, 1) !important;
+        &:hover,
+        &:active {
+          color: white !important;
+          border-color: white !important;
+          background-color: rgba(255, 255, 255, 0.4) !important;
+        }
+      }
+    }
+  }
+}
