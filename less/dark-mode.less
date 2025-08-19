@@ -68,67 +68,41 @@
   --disqus-text: #e0e0e0;
 }
 
-// Theme toggle button styles - matching search icon behavior
+// Theme toggle button styles - text-based matching nav button behavior
 .theme-toggle {
-  cursor: pointer;
-  text-decoration: none !important;
-  color: inherit;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+  // Need relative positioning for absolute positioned text
+  position: relative;
   
-  .theme-icon {
-    font-size: 20px;
+  .theme-text {
     transition: opacity 0.3s ease;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
   }
   
-  .sun-icon {
+  // Light mode: show LIGHT text, hide DARK text
+  .light-text {
     opacity: 1;
   }
   
-  .moon-icon {
+  .dark-text {
     opacity: 0;
-  }
-  
-  &:hover {
-    opacity: 0.8;
-  }
-  
-  // Desktop - no specific sizing, let it scale naturally
-  @media only screen and (min-width: 768px) {
-    position: relative;
-    display: inline-block;
-    
-    .theme-icon {
-      font-size: 20px;
-    }
-  }
-  
-  // Mobile - match search icon styling
-  @media only screen and (max-width: 767px) {
-    display: block;
-    text-align: center;
-    font-size: 16px;
-    
-    .theme-icon {
-      position: static;
-      transform: none;
-      font-size: 20px;
-      display: inline-block;
-    }
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
   }
 }
 
+// Dark mode: show DARK text, hide LIGHT text
 [data-theme="dark"] .theme-toggle {
-  .sun-icon {
+  .light-text {
     opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
   }
   
-  .moon-icon {
+  .dark-text {
     opacity: 1;
+    position: static;
   }
 }
 
@@ -403,10 +377,6 @@ footer .copyright a {
       }
     }
     
-    .theme-toggle .theme-icon {
-      color: var(--text-color) !important;
-    }
-    
     // Override invert class on mobile for light mode
     &.invert {
       .nav li a {
@@ -415,10 +385,6 @@ footer .copyright a {
         &:focus {
           color: var(--nav-invert-text-hover) !important;
         }
-      }
-      
-      .theme-toggle .theme-icon {
-        color: var(--nav-invert-text) !important;
       }
     }
   }

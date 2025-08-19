@@ -734,56 +734,30 @@ pre.highlight {
   --disqus-text: #e0e0e0;
 }
 .theme-toggle {
-  cursor: pointer;
-  text-decoration: none !important;
-  color: inherit;
-  -webkit-transition: all 0.25s;
-  transition: all 0.25s;
+  position: relative;
 }
-.theme-toggle .theme-icon {
-  font-size: 20px;
+.theme-toggle .theme-text {
   transition: opacity 0.3s ease;
+}
+.theme-toggle .light-text {
+  opacity: 1;
+}
+.theme-toggle .dark-text {
+  opacity: 0;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
+  white-space: nowrap;
 }
-.theme-toggle .sun-icon {
-  opacity: 1;
-}
-.theme-toggle .moon-icon {
+[data-theme="dark"] .theme-toggle .light-text {
   opacity: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
-.theme-toggle:hover {
-  opacity: 0.8;
-}
-@media only screen and (min-width: 768px) {
-  .theme-toggle {
-    position: relative;
-    display: inline-block;
-  }
-  .theme-toggle .theme-icon {
-    font-size: 20px;
-  }
-}
-@media only screen and (max-width: 767px) {
-  .theme-toggle {
-    display: block;
-    text-align: center;
-    font-size: 16px;
-  }
-  .theme-toggle .theme-icon {
-    position: static;
-    transform: none;
-    font-size: 20px;
-    display: inline-block;
-  }
-}
-[data-theme="dark"] .theme-toggle .sun-icon {
-  opacity: 0;
-}
-[data-theme="dark"] .theme-toggle .moon-icon {
+[data-theme="dark"] .theme-toggle .dark-text {
   opacity: 1;
+  position: static;
 }
 body {
   background-color: var(--bg-color);
@@ -994,18 +968,12 @@ footer .copyright a:focus {
   .navbar-custom .nav li a:focus {
     color: var(--post-link-hover) !important;
   }
-  .navbar-custom .theme-toggle .theme-icon {
-    color: var(--text-color) !important;
-  }
   .navbar-custom.invert .nav li a {
     color: var(--nav-invert-text) !important;
   }
   .navbar-custom.invert .nav li a:hover,
   .navbar-custom.invert .nav li a:focus {
     color: var(--nav-invert-text-hover) !important;
-  }
-  .navbar-custom.invert .theme-toggle .theme-icon {
-    color: var(--nav-invert-text) !important;
   }
 }
 .side-catalog {
