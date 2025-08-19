@@ -854,8 +854,8 @@ body.navbar-theme-excluded .navbar-custom.invert .nav li a:focus {
   background-color: var(--nav-invert-text) !important;
 }
 .navbar-custom.is-fixed {
-  background-color: var(--bg-color) !important;
-  border-bottom: 1px solid #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.9) !important;
+  border-bottom: 1px solid #f2f2f2 !important;
 }
 .navbar-custom.is-fixed .navbar-brand {
   color: var(--text-color) !important;
@@ -869,6 +869,24 @@ body.navbar-theme-excluded .navbar-custom.invert .nav li a:focus {
 }
 .navbar-custom.is-fixed .nav li a:hover,
 .navbar-custom.is-fixed .nav li a:focus {
+  color: var(--post-link-hover) !important;
+}
+[data-theme="dark"] .navbar-custom.is-fixed {
+  background-color: rgba(45, 45, 45, 0.9) !important;
+  border-bottom: 1px solid #535353 !important;
+}
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-brand {
+  color: var(--text-color) !important;
+}
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-brand:hover,
+[data-theme="dark"] .navbar-custom.is-fixed .navbar-brand:focus {
+  color: var(--post-link-hover) !important;
+}
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a {
+  color: var(--text-color) !important;
+}
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a:hover,
+[data-theme="dark"] .navbar-custom.is-fixed .nav li a:focus {
   color: var(--post-link-hover) !important;
 }
 .search-page {

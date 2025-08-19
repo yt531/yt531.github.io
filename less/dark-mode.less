@@ -227,10 +227,34 @@ body.navbar-theme-excluded {
     }
   }
   
-  // Fixed navbar dark mode styles
+  // Fixed navbar semi-transparent background
   &.is-fixed {
-    background-color: var(--bg-color) !important;
-    border-bottom: 1px solid #ffffff !important;
+    background-color: fade(#ffffff, 90%) !important; // Light mode: 90% white
+    border-bottom: 1px solid darken(#ffffff, 5%) !important;
+    
+    .navbar-brand {
+      color: var(--text-color) !important;
+      &:hover,
+      &:focus {
+        color: var(--post-link-hover) !important;
+      }
+    }
+    
+    .nav li a {
+      color: var(--text-color) !important;
+      &:hover,
+      &:focus {
+        color: var(--post-link-hover) !important;
+      }
+    }
+  }
+}
+
+// Dark mode navbar fixed background override
+[data-theme="dark"] .navbar-custom {
+  &.is-fixed {
+    background-color: fade(#2d2d2d, 90%) !important; // Dark mode: 90% dark background
+    border-bottom: 1px solid lighten(#2d2d2d, 15%) !important; // Lighter border for dark mode
     
     .navbar-brand {
       color: var(--text-color) !important;
