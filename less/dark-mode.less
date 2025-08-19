@@ -483,11 +483,21 @@ body.navbar-theme-excluded {
       a, .tag {
         border-color: rgba(255, 255, 255, 0.8) !important;
         color: rgba(255, 255, 255, 1) !important;
+        
+        // Ensure all text elements inside tags are white
+        > sup {
+          color: rgba(255, 255, 255, 1) !important;
+        }
+        
         &:hover,
         &:active {
           color: white !important;
           border-color: white !important;
           background-color: rgba(255, 255, 255, 0.4) !important;
+          
+          > sup {
+            color: white !important;
+          }
         }
       }
     }
