@@ -72,6 +72,7 @@
 .theme-toggle {
   // Need relative positioning for absolute positioned text
   position: relative;
+  display: inline-block;
   
   .theme-text {
     transition: opacity 0.3s ease;
@@ -89,6 +90,24 @@
     top: 0;
     white-space: nowrap;
   }
+  
+  // Mobile specific fixes
+  @media only screen and (max-width: 767px) {
+    width: auto;
+    min-width: 0;
+    overflow: visible;
+    
+    .theme-text {
+      white-space: nowrap;
+    }
+    
+    .dark-text {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
 }
 
 // Dark mode: show DARK text, hide LIGHT text
@@ -103,6 +122,21 @@
   .dark-text {
     opacity: 1;
     position: static;
+  }
+  
+  // Mobile specific fixes for dark mode
+  @media only screen and (max-width: 767px) {
+    .light-text {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+    }
+    
+    .dark-text {
+      position: static;
+      width: auto;
+    }
   }
 }
 
@@ -360,8 +394,13 @@ footer .copyright a {
   }
 }
 
-// Mobile navbar
+// Mobile navbar and layout fixes
 @media only screen and (max-width: 767px) {
+  // Prevent horizontal overflow
+  body {
+    overflow-x: hidden;
+  }
+  
   .navbar-default .navbar-collapse {
     background: var(--bg-color) !important;
     border: 1px solid var(--border-color) !important;
@@ -386,6 +425,16 @@ footer .copyright a {
           color: var(--nav-invert-text-hover) !important;
         }
       }
+    }
+  }
+  
+  // Ensure theme toggle doesn't cause horizontal scroll
+  .theme-toggle-li {
+    overflow: hidden;
+    
+    .theme-toggle {
+      max-width: 100%;
+      overflow: hidden;
     }
   }
 }
