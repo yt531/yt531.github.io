@@ -89,10 +89,6 @@
   
   .dark-text {
     opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    white-space: nowrap;
   }
   
   // Mobile specific fixes
@@ -104,47 +100,17 @@
     .theme-text {
       white-space: nowrap;
     }
-    
-    .dark-text {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-    }
   }
 }
 
-// Dark mode: show DARK text, hide LIGHT text - with smooth transitions
+// Dark mode: show DARK text, hide LIGHT text - pure opacity transition
 [data-theme="dark"] .theme-toggle {
   .light-text {
     opacity: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: scale(0.98) translateZ(0); // Micro scale to avoid text jumping
   }
   
   .dark-text {
     opacity: 1;
-    position: static;
-    transform: scale(1) translateZ(0); // Ensure consistent scaling
-  }
-  
-  // Mobile specific fixes for dark mode
-  @media only screen and (max-width: 767px) {
-    .light-text {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      transform: scale(0.98) translateZ(0);
-    }
-    
-    .dark-text {
-      position: static;
-      width: auto;
-      transform: scale(1) translateZ(0);
-    }
   }
 }
 

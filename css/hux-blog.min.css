@@ -749,10 +749,6 @@ pre.highlight {
 }
 .theme-toggle .dark-text {
   opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  white-space: nowrap;
 }
 @media only screen and (max-width: 767px) {
   .theme-toggle {
@@ -763,38 +759,12 @@ pre.highlight {
   .theme-toggle .theme-text {
     white-space: nowrap;
   }
-  .theme-toggle .dark-text {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-  }
 }
 [data-theme="dark"] .theme-toggle .light-text {
   opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  transform: scale(0.98) translateZ(0);
 }
 [data-theme="dark"] .theme-toggle .dark-text {
   opacity: 1;
-  position: static;
-  transform: scale(1) translateZ(0);
-}
-@media only screen and (max-width: 767px) {
-  [data-theme="dark"] .theme-toggle .light-text {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    transform: scale(0.98) translateZ(0);
-  }
-  [data-theme="dark"] .theme-toggle .dark-text {
-    position: static;
-    width: auto;
-    transform: scale(1) translateZ(0);
-  }
 }
 body {
   background-color: var(--bg-color);
