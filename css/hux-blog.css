@@ -747,7 +747,7 @@ pre.highlight {
 @media only screen and (min-width: 768px) {
   .theme-toggle {
     position: absolute;
-    right: calc(100% + 40px);
+    right: calc(100% + 80px);
     top: 0;
     padding: 20px 10px 20px 0;
     line-height: 20px;
@@ -756,10 +756,10 @@ pre.highlight {
     z-index: 10;
   }
   .theme-toggle .theme-text {
-    position: static;
-    left: auto;
-    top: auto;
-    width: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
     padding: 0;
     line-height: 20px;
     text-align: left;

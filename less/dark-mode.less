@@ -86,7 +86,7 @@
   @media only screen and (min-width: 768px) {
     // Position theme toggle text to the left of Home button with 40px gap
     position: absolute;
-    right: calc(100% + 40px); // Move left: 100% + 40px gap from Home text
+    right: calc(100% + 80px); // Move left: 100% + 80px gap from Home text (40px spacing + button width)
     top: 0;
     padding: 20px 10px 20px 0; // Adjust padding: top right bottom left
     line-height: 20px;
@@ -95,11 +95,11 @@
     z-index: 10; // Ensure button appears above other elements
     
     .theme-text {
-      // Remove internal positioning to use parent's absolute position
-      position: static;
-      left: auto;
-      top: auto;
-      width: auto;
+      // Keep absolute positioning for text overlay effect
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
       padding: 0; // Remove internal padding to avoid duplication
       line-height: 20px;
       text-align: left;
