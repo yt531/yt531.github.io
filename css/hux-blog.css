@@ -749,10 +749,6 @@ pre.highlight {
 }
 .theme-toggle .dark-text {
   opacity: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  white-space: nowrap;
 }
 @media only screen and (max-width: 767px) {
   .theme-toggle {
