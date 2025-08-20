@@ -759,12 +759,30 @@ pre.highlight {
   .theme-toggle .theme-text {
     white-space: nowrap;
   }
+  .theme-toggle .dark-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
 }
 [data-theme="dark"] .theme-toggle .light-text {
   opacity: 0;
 }
 [data-theme="dark"] .theme-toggle .dark-text {
   opacity: 1;
+}
+@media only screen and (max-width: 767px) {
+  [data-theme="dark"] .theme-toggle .light-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+  [data-theme="dark"] .theme-toggle .dark-text {
+    position: static;
+    width: auto;
+  }
 }
 body {
   background-color: var(--bg-color);
