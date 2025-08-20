@@ -744,6 +744,13 @@ pre.highlight {
   backface-visibility: hidden;
   transform: translateZ(0);
 }
+@media only screen and (min-width: 768px) {
+  .theme-toggle .theme-text {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}
 .theme-toggle .light-text {
   opacity: 1;
 }

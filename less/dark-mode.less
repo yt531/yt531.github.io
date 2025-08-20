@@ -82,6 +82,15 @@
     transform: translateZ(0); // Create compositing layer
   }
   
+  // Desktop: absolute positioning for overlap
+  @media only screen and (min-width: 768px) {
+    .theme-text {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+  }
+  
   // Light mode: show LIGHT text, hide DARK text
   .light-text {
     opacity: 1;
