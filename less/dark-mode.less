@@ -82,21 +82,27 @@
     transform: translateZ(0); // Create compositing layer
   }
   
-  // Desktop: precise positioning to mimic navbar-nav li a alignment
+  // Desktop: absolute positioning to place theme toggle text left of Home button
   @media only screen and (min-width: 768px) {
-    // Match navbar-custom .nav li a padding and line-height for perfect alignment
-    padding: 20px;
+    // Position theme toggle text to the left of Home button with 40px gap
+    position: absolute;
+    right: calc(100% + 40px); // Move left: 100% + 40px gap from Home text
+    top: 0;
+    padding: 20px 10px 20px 0; // Adjust padding: top right bottom left
     line-height: 20px;
+    white-space: nowrap; // Prevent text wrapping
+    min-width: 60px; // Ensure adequate button width
+    z-index: 10; // Ensure button appears above other elements
     
     .theme-text {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      // Inherit the same padding and line-height as parent
-      padding: 20px;
+      // Remove internal positioning to use parent's absolute position
+      position: static;
+      left: auto;
+      top: auto;
+      width: auto;
+      padding: 0; // Remove internal padding to avoid duplication
       line-height: 20px;
-      text-align: left; // Ensure consistent text alignment
+      text-align: left;
     }
   }
   
@@ -125,6 +131,16 @@
       top: 0;
       width: 100%;
     }
+  }
+}
+
+// Desktop: Create positioning context for theme toggle button
+@media only screen and (min-width: 768px) {
+  .theme-toggle-li {
+    // Create positioning context for absolute positioned theme toggle
+    position: relative;
+    width: 0; // Hide original li width to prevent layout shift
+    overflow: visible; // Allow absolutely positioned content to show
   }
 }
 

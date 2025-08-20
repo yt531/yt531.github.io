@@ -746,15 +746,21 @@ pre.highlight {
 }
 @media only screen and (min-width: 768px) {
   .theme-toggle {
-    padding: 20px;
+    position: absolute;
+    right: calc(100% + 40px);
+    top: 0;
+    padding: 20px 10px 20px 0;
     line-height: 20px;
+    white-space: nowrap;
+    min-width: 60px;
+    z-index: 10;
   }
   .theme-toggle .theme-text {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    padding: 20px;
+    position: static;
+    left: auto;
+    top: auto;
+    width: auto;
+    padding: 0;
     line-height: 20px;
     text-align: left;
   }
@@ -779,6 +785,13 @@ pre.highlight {
     left: 0;
     top: 0;
     width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .theme-toggle-li {
+    position: relative;
+    width: 0;
+    overflow: visible;
   }
 }
 [data-theme="dark"] .theme-toggle .light-text {
