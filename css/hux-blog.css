@@ -745,10 +745,20 @@ pre.highlight {
   transform: translateZ(0);
 }
 @media only screen and (min-width: 768px) {
+  .theme-toggle {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+  }
   .theme-toggle .theme-text {
     position: absolute;
     left: 0;
     top: 0;
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 20px;
+    text-align: left;
   }
 }
 .theme-toggle .light-text {
