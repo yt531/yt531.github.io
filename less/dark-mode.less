@@ -32,6 +32,8 @@
   --back-top-hover-text: #ffffff;
   --disqus-bg: #ffffff;
   --disqus-text: #404040;
+  --catalog-active-bg: #f5f5f5;
+  --catalog-active-link: #0085a1;
 }
 
 // Dark theme variables
@@ -66,6 +68,8 @@
   --back-top-hover-text: #ffffff;
   --disqus-bg: #2d2d2d;
   --disqus-text: #e0e0e0;
+  --catalog-active-bg: #3a3a3a;
+  --catalog-active-link: #66c7e0;
 }
 
 // Theme toggle button styles - optimized for smooth transitions
@@ -503,6 +507,14 @@ footer .copyright a {
       color: var(--text-color) !important;
       &:hover {
         color: var(--post-link-hover) !important;
+      }
+    }
+    
+    .active {
+      background-color: var(--catalog-active-bg) !important;
+      
+      a {
+        color: var(--catalog-active-link) !important;
       }
     }
   }
