@@ -1131,6 +1131,12 @@ body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:active {
 [data-theme="dark"] footer .fa-stack .fa-inverse {
   color: #404040 !important;
 }
+[data-theme="dark"] .sidebar-container .short-about .fa-stack .fa-circle {
+  color: white !important;
+}
+[data-theme="dark"] .sidebar-container .short-about .fa-stack .fa-inverse {
+  color: #404040 !important;
+}
 body {
   /* Hux learn from
      *     TypeIsBeautiful,

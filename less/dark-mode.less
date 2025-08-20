@@ -580,9 +580,21 @@ body.navbar-theme-excluded {
   }
 }
 
-// Dark mode styles for footer font awesome icons
-[data-theme="dark"] footer {
-  .fa-stack {
+// Dark mode styles for footer and sidebar font awesome icons
+[data-theme="dark"] {
+  // Footer social media icons
+  footer .fa-stack {
+    .fa-circle {
+      color: white !important;
+    }
+    
+    .fa-inverse {
+      color: #404040 !important;
+    }
+  }
+  
+  // Sidebar ABOUT ME section social media icons
+  .sidebar-container .short-about .fa-stack {
     .fa-circle {
       color: white !important;
     }
