@@ -616,3 +616,137 @@ body.navbar-theme-excluded {
     }
   }
 }
+
+// Dark mode code highlighting - Light background with dark text for better readability
+[data-theme="dark"] {
+  // Override code block background to light gray
+  .highlight,
+  pre.highlight {
+    background: #f6f6f6 !important;
+  }
+  
+  .highlight pre {
+    background: #f6f6f6 !important;
+  }
+  
+  .highlight .hll {
+    background: #f6f6f6 !important;
+  }
+  
+  // Basic text colors - change from light to dark
+  .highlight .c {
+    color: #6c757d !important; // Comments: medium gray for good readability
+  }
+  
+  .highlight .err {
+    color: #dc3545 !important; // Errors: red
+    background-color: #f8d7da !important; // Light red background
+  }
+  
+  // Keep Coq language error styling
+  .language-coq .highlight .err {
+    background-color: transparent !important;
+  }
+  
+  // Basic syntax elements - adjust light colors to dark
+  .highlight .n {
+    color: #2c3e50 !important; // Names: dark blue-gray
+  }
+  
+  .highlight .o {
+    color: #2c3e50 !important; // Operators: dark blue-gray
+  }
+  
+  .highlight .p {
+    color: #2c3e50 !important; // Punctuation: dark blue-gray
+  }
+  
+  // Comments - all comment types
+  .highlight .cm {
+    color: #6c757d !important; // Multi-line comments
+  }
+  
+  .highlight .cp {
+    color: #6c757d !important; // Preprocessor comments
+  }
+  
+  .highlight .c1 {
+    color: #6c757d !important; // Single line comments
+  }
+  
+  .highlight .cs {
+    color: #6c757d !important; // Special comments
+  }
+  
+  // Function names and identifiers
+  .highlight .nf {
+    color: #2c3e50 !important; // Function names: dark blue-gray
+  }
+  
+  .highlight .nl {
+    color: #e67e22 !important; // Labels: orange (darker than original)
+  }
+  
+  .highlight .nn {
+    color: #2c3e50 !important; // Namespaces: dark blue-gray
+  }
+  
+  .highlight .nx {
+    color: #2c3e50 !important; // Other names: dark blue-gray
+  }
+  
+  .highlight .py {
+    color: #e67e22 !important; // Property: orange (darker)
+  }
+  
+  .highlight .nv {
+    color: #e67e22 !important; // Variables: orange (darker)
+  }
+  
+  // Whitespace - change from near-white to dark
+  .highlight .w {
+    color: #2c3e50 !important; // Whitespace: dark blue-gray
+  }
+  
+  // Variable types
+  .highlight .bp {
+    color: #e67e22 !important; // Builtin pseudo: orange (darker)
+  }
+  
+  .highlight .vc {
+    color: #e67e22 !important; // Variable class: orange (darker)
+  }
+  
+  .highlight .vg {
+    color: #e67e22 !important; // Variable global: orange (darker)
+  }
+  
+  .highlight .vi {
+    color: #e06c75 !important; // Variable instance: keep original red
+  }
+  
+  // Diff colors - adjust for better contrast
+  .highlight .gu {
+    color: #495057 !important; // Diff unified: darker gray
+  }
+  
+  // Table styling for code blocks
+  .highlighter-rouge .highlight {
+    .rouge-code {
+      pre {
+        color: #2c3e50 !important; // Default color for code without specific highlighting
+      }
+    }
+  }
+  
+  // Ensure proper styling for mobile
+  @media (max-width: 480px) {
+    .highlighter-rouge .highlight {
+      background: #f6f6f6 !important;
+      
+      table > tbody > tr > td > pre {
+        background: #f6f6f6 !important;
+      }
+    }
+  }
+}

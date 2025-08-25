@@ -1142,6 +1142,94 @@ body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:active {
 [data-theme="dark"] .sidebar-container .short-about .fa-stack .fa-inverse {
   color: #404040 !important;
 }
+[data-theme="dark"] .highlight,
+[data-theme="dark"] pre.highlight {
+  background: #f6f6f6 !important;
+}
+[data-theme="dark"] .highlight pre {
+  background: #f6f6f6 !important;
+}
+[data-theme="dark"] .highlight .hll {
+  background: #f6f6f6 !important;
+}
+[data-theme="dark"] .highlight .c {
+  color: #6c757d !important;
+}
+[data-theme="dark"] .highlight .err {
+  color: #dc3545 !important;
+  background-color: #f8d7da !important;
+}
+[data-theme="dark"] .language-coq .highlight .err {
+  background-color: transparent !important;
+}
+[data-theme="dark"] .highlight .n {
+  color: #2c3e50 !important;
+}
+[data-theme="dark"] .highlight .o {
+  color: #2c3e50 !important;
+}
+[data-theme="dark"] .highlight .p {
+  color: #2c3e50 !important;
+}
+[data-theme="dark"] .highlight .cm {
+  color: #6c757d !important;
+}
+[data-theme="dark"] .highlight .cp {
+  color: #6c757d !important;
+}
+[data-theme="dark"] .highlight .c1 {
+  color: #6c757d !important;
+}
+[data-theme="dark"] .highlight .cs {
+  color: #6c757d !important;
+}
+[data-theme="dark"] .highlight .nf {
+  color: #2c3e50 !important;
+}
+[data-theme="dark"] .highlight .nl {
+  color: #e67e22 !important;
+}
+[data-theme="dark"] .highlight .nn {
+  color: #2c3e50 !important;
+}
+[data-theme="dark"] .highlight .nx {
+  color: #2c3e50 !important;
+}
+[data-theme="dark"] .highlight .py {
+  color: #e67e22 !important;
+}
+[data-theme="dark"] .highlight .nv {
+  color: #e67e22 !important;
+}
+[data-theme="dark"] .highlight .w {
+  color: #2c3e50 !important;
+}
+[data-theme="dark"] .highlight .bp {
+  color: #e67e22 !important;
+}
+[data-theme="dark"] .highlight .vc {
+  color: #e67e22 !important;
+}
+[data-theme="dark"] .highlight .vg {
+  color: #e67e22 !important;
+}
+[data-theme="dark"] .highlight .vi {
+  color: #e06c75 !important;
+}
+[data-theme="dark"] .highlight .gu {
+  color: #495057 !important;
+}
+[data-theme="dark"] .highlighter-rouge .highlight .rouge-code pre {
+  color: #2c3e50 !important;
+}
+@media (max-width: 480px) {
+  [data-theme="dark"] .highlighter-rouge .highlight {
+    background: #f6f6f6 !important;
+  }
+  [data-theme="dark"] .highlighter-rouge .highlight table > tbody > tr > td > pre {
+    background: #f6f6f6 !important;
+  }
+}
 body {
   /* Hux learn from
      *     TypeIsBeautiful,
