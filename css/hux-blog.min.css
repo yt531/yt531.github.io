@@ -1144,13 +1144,13 @@ body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:active {
 }
 [data-theme="dark"] .highlight,
 [data-theme="dark"] pre.highlight {
-  background: #f6f6f6 !important;
+  background: #f0f0f0 !important;
 }
 [data-theme="dark"] .highlight pre {
-  background: #f6f6f6 !important;
+  background: #f0f0f0 !important;
 }
 [data-theme="dark"] .highlight .hll {
-  background: #f6f6f6 !important;
+  background: #f0f0f0 !important;
 }
 [data-theme="dark"] .highlight .c {
   color: #6c757d !important;
@@ -1224,10 +1224,10 @@ body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:active {
 }
 @media (max-width: 480px) {
   [data-theme="dark"] .highlighter-rouge .highlight {
-    background: #f6f6f6 !important;
+    background: #f0f0f0 !important;
   }
   [data-theme="dark"] .highlighter-rouge .highlight table > tbody > tr > td > pre {
-    background: #f6f6f6 !important;
+    background: #f0f0f0 !important;
   }
 }
 body {
