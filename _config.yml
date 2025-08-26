@@ -77,7 +77,7 @@ ga_domain: blog.allenspace.dpdns.org
 # Sidebar settings
 sidebar: true # whether or not using Sidebar.
 sidebar-about-description: "分享技術和生活"
-sidebar-avatar: https://avatars.githubusercontent.com/u/100509912?u=ef597a17e92a16e15408260abe9d8eb958698da0&v=4 # use absolute URL, seeing it's used in both `/` and `/about/`
+sidebar-avatar: https://cdn.jsdelivr.net/gh/allen57218/img@main/img/20250826064243_aa8k90mzce.jpg # use absolute URL, seeing it's used in both `/` and `/about/`
 
 # Featured Tags
 featured-tags: true # whether or not using Feature-Tags
@@ -86,6 +86,9 @@ featured-condition-size: 0 #預設是1 A tag will be featured if the size of it 
 # Progressive Web Apps
 chrome-tab-theme-color: "#000000"
 service-worker: true
+
+# Theme settings
+default_theme: "dark" # Options: "light" or "dark" - 設定網站的預設主題
 
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false

@@ -49,6 +49,36 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ " /css/hux-blog.min.css" | prepend: site.baseurl }}">
 
+    <!-- Theme Initialization Script - Must be executed before page render to prevent flashing -->
+    <script>
+    (function() {
+        'use strict';
+        
+        // Get theme configuration from Jekyll config
+        var DEFAULT_THEME = '{{ site.default_theme | default: "light" }}';
+        var THEME_KEY = 'blog-theme';
+        
+        // Get saved theme or use config default
+        var savedTheme = localStorage.getItem(THEME_KEY);
+        var currentTheme = savedTheme || DEFAULT_THEME;
+        
+        // Apply theme immediately to prevent flashing
+        if (currentTheme === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+        
+        // Save default theme to localStorage if not set
+        if (!savedTheme) {
+            localStorage.setItem(THEME_KEY, DEFAULT_THEME);
+        }
+        
+        // Pass page front matter variables to JavaScript for conditional theme logic
+        window.pageHeaderImg = {% if page.header-img %}'{{ page.header-img }}'{% else %}undefined{% endif %};
+        window.pageHeaderStyle = {% if page.header-style %}'{{ page.header-style }}'{% else %}undefined{% endif %};
+        window.defaultTheme = DEFAULT_THEME;
+    })();
+    </script>
+
     <!-- Custom Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 

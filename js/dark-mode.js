@@ -11,6 +11,9 @@
     const DARK_THEME = 'dark';
     const LIGHT_THEME = 'light';
     
+    // Get default theme from config (injected by Jekyll in head.html)
+    const DEFAULT_THEME = window.defaultTheme || 'light';
+    
     // Toggle state management
     let isToggling = false;
     const TOGGLE_COOLDOWN = 300;
@@ -24,9 +27,9 @@
         };
     }
 
-    // Get current theme from localStorage or default to dark
+    // Get current theme from localStorage or use config default
     function getCurrentTheme() {
-        return localStorage.getItem(THEME_KEY) || DARK_THEME;
+        return localStorage.getItem(THEME_KEY) || DEFAULT_THEME;
     }
 
     // Set theme in localStorage
@@ -153,9 +156,9 @@
 
     // Initialize when DOM is ready
     function init() {
-        // Set default theme to dark and initialize
+        // Set config default theme if not already saved
         if (!localStorage.getItem(THEME_KEY)) {
-            setTheme(DARK_THEME);
+            setTheme(DEFAULT_THEME);
         }
         
         initTheme();
