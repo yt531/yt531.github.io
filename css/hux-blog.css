@@ -755,23 +755,22 @@ pre.highlight {
 }
 @media only screen and (min-width: 768px) {
   .theme-toggle {
-    position: absolute;
-    right: calc(100% + 60px);
-    top: 0;
-    padding: 20px 10px 20px 0;
+    padding: 20px;
     line-height: 20px;
     white-space: nowrap;
-    min-width: 60px;
-    z-index: 10;
   }
-  .theme-toggle .theme-text {
+  .theme-toggle .dark-text {
+    position: relative;
+    display: inline;
+  }
+  .theme-toggle .light-text {
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
-    padding: 20px 0;
+    padding: 20px;
     line-height: 20px;
-    text-align: left;
+    text-align: right;
   }
 }
 .theme-toggle .light-text {
@@ -799,7 +798,6 @@ pre.highlight {
 @media only screen and (min-width: 768px) {
   .theme-toggle-li {
     position: relative;
-    width: 0;
     overflow: visible;
   }
 }

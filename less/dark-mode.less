@@ -74,7 +74,6 @@
 
 // Theme toggle button styles - optimized for smooth transitions
 .theme-toggle {
-  // Need relative positioning for absolute positioned text
   position: relative;
   display: inline-block;
   will-change: auto; // Avoid unnecessary layer creation
@@ -86,27 +85,27 @@
     transform: translateZ(0); // Create compositing layer
   }
   
-  // Desktop: absolute positioning to place theme toggle text left of Home button
+  // Desktop: dark-text relative positioning, light-text absolute positioning
   @media only screen and (min-width: 768px) {
-    // Position theme toggle text to the left of Home button with 40px gap
-    position: absolute;
-    right: calc(100% + 60px); // Move left: 100% + 60px gap from Home text (20px spacing + button width)
-    top: 0;
-    padding: 20px 10px 20px 0; // Adjust padding: top right bottom left
+    padding: 20px; // Match other navbar links
     line-height: 20px;
-    white-space: nowrap; // Prevent text wrapping
-    min-width: 60px; // Ensure adequate button width
-    z-index: 10; // Ensure button appears above other elements
+    white-space: nowrap;
     
-    .theme-text {
-      // Keep absolute positioning for text overlay effect
+    .dark-text {
+      // Relative positioning - displays normally in navbar
+      position: relative;
+      display: inline;
+    }
+    
+    .light-text {
+      // Absolute positioning - overlays on top of dark-text
       position: absolute;
       left: 0;
       top: 0;
       width: 100%;
-      padding: 20px 0; // Restore top/bottom padding to match navbar height
+      padding: 20px; // Match container padding
       line-height: 20px;
-      text-align: left;
+      text-align: right; // Right align so T aligns with K of DARK
     }
   }
   
@@ -141,10 +140,10 @@
 // Desktop: Create positioning context for theme toggle button
 @media only screen and (min-width: 768px) {
   .theme-toggle-li {
-    // Create positioning context for absolute positioned theme toggle
+    // Create positioning context for absolute positioned light-text
     position: relative;
-    width: 0; // Hide original li width to prevent layout shift
-    overflow: visible; // Allow absolutely positioned content to show
+    // Remove width: 0 since dark-text now displays normally in navbar
+    overflow: visible; // Allow absolutely positioned light-text to show
   }
 }
 
