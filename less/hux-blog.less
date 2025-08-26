@@ -93,13 +93,29 @@ img.shadow {
 select {
   -webkit-appearance: none;
   margin-top: 15px;
-  color: #337ab7;
-  border-color: #337ab7;
+  color: var(--post-link);
+  border-color: var(--post-link);
   padding: 0em 0.4em;
-  background: white;
+  background: var(--post-bg);
+  transition: all 0.3s ease;
+  
   &.sel-lang {
     min-height: 28px;
     font-size: 14px;
+  }
+  
+  // Hover and focus states
+  &:hover,
+  &:focus {
+    color: var(--post-link-hover);
+    border-color: var(--post-link-hover);
+    outline: none;
+  }
+  
+  // Option elements (limited cross-browser support)
+  option {
+    background: var(--post-bg);
+    color: var(--post-text);
   }
 }
 
