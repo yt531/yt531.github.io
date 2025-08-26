@@ -21,7 +21,7 @@
                 <div class="navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li class="theme-toggle-li">
-                            <a href="javascript:void(0)" class="theme-toggle" onclick="toggleTheme()" title="Toggle Dark/Light Mode">
+                            <a href="#" class="theme-toggle" onclick="toggleTheme(); return false;" title="Toggle Dark/Light Mode">
                                 <span class="theme-text dark-text">&nbsp;DARK</span>
                                 <span class="theme-text light-text">LIGHT</span>
                             </a>
@@ -37,7 +37,7 @@
                         {% endif %}
                         {% endfor %}
                         <li class="search-icon">
-                            <a href="javascript:void(0)">
+                            <a href="#" onclick="return false;">
                                 <i class="fa fa-search"></i>
                             </a>
                         </li>
