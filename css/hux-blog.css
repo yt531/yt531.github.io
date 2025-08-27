@@ -760,12 +760,12 @@ pre.highlight {
   }
   .theme-toggle .light-text {
     position: absolute;
-    left: 0;
+    left: -0.6em;
     top: 0;
     width: 100%;
     padding: 20px;
     line-height: 20px;
-    text-align: right;
+    text-align: left;
   }
 }
 .theme-toggle .light-text {
