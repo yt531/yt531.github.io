@@ -812,14 +812,6 @@ pre.highlight {
   [data-theme="dark"] .theme-toggle .dark-text {
     position: static;
     width: auto;
-    font-size: 0;
-    /* Hide original text including space */
-  }
-  [data-theme="dark"] .theme-toggle .dark-text:after {
-    content: "DARK";
-    font-size: 14px;
-    /* Restore font size */
-    display: inline-block;
   }
 }
 body {
