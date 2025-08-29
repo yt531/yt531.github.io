@@ -4,7 +4,7 @@ title: "Mermaid 10.9.0 升級測試"
 subtitle: "驗證新版本功能與深色模式適配"
 date: 2025-01-29 12:00:00
 author: "Blog Admin"
-header-img: "img/post-bg-js-version.jpg"
+header-style: text
 tags:
     - 技術
     - Mermaid
