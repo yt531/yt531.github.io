@@ -55,6 +55,37 @@ gantt
     測試工作    :         test1, 2025-02-15,2025-03-15
 ```
 
+### 圓餅圖測試
+
+```mermaid
+pie showData
+    title Key elements in Product X
+    "Calcium" : 42.96
+    "Potassium" : 50.05
+    "Magnesium" : 10.01
+    "Iron" :  5
+```
+
+### Git 圖測試
+
+```mermaid
+---
+title: Example Git diagram
+---
+gitGraph
+   commit
+   commit
+   branch develop
+   checkout develop
+   commit
+   commit
+   checkout main
+   merge develop
+   commit id: "Normal" tag: "v1.0.0"
+   commit id: "Reverse" type: REVERSE tag: "RC_1"
+   commit id: "Highlight" type: HIGHLIGHT tag: "8.8.4"
+```
+
 ### 新功能：心智圖 (v10+ 新增)
 
 ```mermaid
