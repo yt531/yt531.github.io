@@ -93,6 +93,10 @@ default_theme: "dark" # Options: "light" or "dark" - 設定網站的預設主題
 # MathJax rendering for layout:page (e.g. post preview)
 page-mathjax: false
 
+# Mermaid settings
+mermaid: true
+mermaid_version: "10.9.0"
+
 # Friends
 friends:
   [
