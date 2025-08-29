@@ -1,3 +1,31 @@
+<style>
+/* Mermaid CSS isolation - lightweight fixes only */
+.language-mermaid {
+  /* Override post-container img styles for mermaid SVGs */
+  text-align: center;
+  margin: 1.5em 0;
+}
+
+.language-mermaid svg {
+  /* Fix SVG display issues */
+  max-width: 100% !important;
+  height: auto !important;
+  display: block;
+  margin: 0 auto !important;
+}
+
+/* Override blog link colors in mermaid diagrams */
+.post-container .language-mermaid a {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+.post-container .language-mermaid a:hover,
+.post-container .language-mermaid a:focus {
+  color: inherit !important;
+}
+</style>
+
 <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid_version }}/dist/mermaid.min.js"></script>
 <script>
   // 根據網站主題自動選擇mermaid主題
