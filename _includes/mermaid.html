@@ -28,15 +28,11 @@
 
 <script src="https://cdn.jsdelivr.net/npm/mermaid@{{ site.mermaid_version }}/dist/mermaid.min.js"></script>
 <script>
-  // 根據網站主題自動選擇mermaid主題
-  const isDarkMode = '{{ site.default_theme }}' === 'dark' || 
-                    document.body.classList.contains('dark-theme') ||
-                    document.documentElement.classList.contains('dark-theme');
-  
+  // Mermaid 固定使用淺色主題
   mermaid.initialize({
     startOnLoad: true,
     securityLevel: 'loose',
-    theme: isDarkMode ? 'dark' : 'default',
+    theme: 'default',
     flowchart: {
       useMaxWidth: false,
       htmlLabels: true
@@ -45,30 +41,4 @@
   
   // 初始化所有mermaid圖表
   mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
-
-  // 為主題切換提供全域函數
-  window.updateMermaidTheme = function(isDark) {
-    if (typeof mermaid !== 'undefined') {
-      mermaid.initialize({
-        startOnLoad: true,
-        securityLevel: 'loose',
-        theme: isDark ? 'dark' : 'default',
-        flowchart: {
-          useMaxWidth: false,
-          htmlLabels: true
-        }
-      });
-      
-      // 重新渲染所有圖表
-      const mermaidElements = document.querySelectorAll('.language-mermaid');
-      mermaidElements.forEach(el => {
-        // 保存原始內容以便重新渲染
-        if (!el.hasAttribute('data-original')) {
-          el.setAttribute('data-original', el.innerHTML);
-        }
-        el.innerHTML = el.getAttribute('data-original');
-      });
-      mermaid.init(undefined, mermaidElements);
-    }
-  };
 </script>
