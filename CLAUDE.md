@@ -35,7 +35,7 @@ Posts support these key front matter options:
 - `header-img` - Header background image path
 - `header-style: text` - Use text-style header instead of image
 - `mathjax: true` - Enable LaTeX math rendering
-- `mermaid: true` - Enable Mermaid 8.0.0 diagram support
+- `mermaid: true` - Enable Mermaid 10.9.0 diagram support with automatic dark theme adaptation
 - `catalog: true` - Enable table of contents
 - `update` - Article last update timestamp
 - `tags` - Post categorization
@@ -52,6 +52,8 @@ Key `_config.yml` settings:
 - **Analytics**: Google Analytics and Disqus comments
 - **PWA**: Service worker enabled for Progressive Web App features
 - **Jekyll**: Uses kramdown markdown processor with syntax highlighting
+- **Mermaid**: Version 10.9.0 with configurable version (`mermaid_version`) and automatic dark theme support
+- **Theme**: `default_theme: "dark"` controls both site theme and mermaid diagram themes
 
 ### Special Features
 - **Keynote Support**: Embed HTML presentations using iframe layout
@@ -59,5 +61,14 @@ Key `_config.yml` settings:
 - **Sidebar**: Dynamic sidebar with author info and social links
 - **Search**: JSON-based search functionality
 - **PWA**: Progressive Web App with service worker and manifest
+- **Mermaid Diagrams**: Unified handling through `_includes/mermaid.html` with automatic theme switching and dynamic re-rendering support
+
+### Mermaid Configuration
+The blog uses a centralized mermaid configuration system:
+- **Include File**: `_includes/mermaid.html` handles all mermaid initialization
+- **Version Control**: Set version in `_config.yml` with `mermaid_version: "10.9.0"`
+- **Theme Adaptation**: Automatically switches between `dark` and `default` themes based on site configuration
+- **Dynamic Updates**: Global `updateMermaidTheme(isDark)` function for runtime theme switching
+- **Supported Charts**: flowcharts, sequence diagrams, gantt charts, class diagrams, mindmaps, timelines, and more
 
 When modifying posts, ensure proper YAML front matter format and follow existing conventions for tags, images, and metadata.

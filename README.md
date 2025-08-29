@@ -6,7 +6,7 @@
 
 ## 簡介
 
-本項目是 Fork 自 [Hux Blog](https://huangxuan.me)，在原版的基礎上添加了 Mermaid 支援（Mermaid 8.0.0），修復了原版 blog 的 LaTeX 顯示問題，支援文章更新時間。參考自 [Elmagnifico's Blog](https://github.com/elmagnificogi/elmagnificogi.github.io)
+本項目是 Fork 自 [Hux Blog](https://huangxuan.me)，在原版的基礎上添加了 Mermaid 支援（已升級至 Mermaid 10.9.0 並支援自動深色模式切換），修復了原版 blog 的 LaTeX 顯示問題，支援文章更新時間。參考自 [Elmagnifico's Blog](https://github.com/elmagnificogi/elmagnificogi.github.io)
 
 本項目通過 Jekyll 在 GitHub Pages 上搭建 Blog 系統。Jekyll 是一個靜態網站生成器（Static Site Generator, SSG），它能將 Markdown、HTML、Liquid 模板等內容轉換成靜態網頁，Jekyll 會將你的文件內容加入你選擇主題的布局樣式中，最後產生屬於你的靜態部落格網站。
 
@@ -86,13 +86,19 @@ mathjax: true
 詳細可以看這裡 
 > http://github.elmagnifico.tech/2021/04/30/Typora-LaTex-Mathjax/
 
-3. 開啟 Mermaid 8.0.0 圖表支援：
+3. 開啟 Mermaid 10.9.0 圖表支援：
 
 ```yml
 mermaid: true
 ```
 
-啟用後，您就可以在文章中使用 Mermaid 語法來繪製流程圖、序列圖、甘特圖等各種圖表。
+啟用後，您就可以在文章中使用 Mermaid 語法來繪製流程圖、序列圖、甘特圖、心智圖、時間線等各種圖表。
+
+**新版本特色：**
+- 自動適配深色/淺色主題
+- 支援新圖表類型（心智圖、時間線等）
+- 更好的效能和安全性
+- 可通過 `_config.yml` 中的 `mermaid_version` 設定版本號
 
 4. 添加更新時間：
 
