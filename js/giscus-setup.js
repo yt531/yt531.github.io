@@ -1,26 +1,20 @@
----
-permalink: /js/giscus-setup.js
----
-
 function determineGiscusTheme() {
-  {% if site.default_theme %}
-    // Check localStorage for saved theme preference
-    let savedTheme = localStorage.getItem('theme');
-    if (savedTheme) {
-      return savedTheme === 'dark' ? "{{ site.giscus.dark_theme }}" : "{{ site.giscus.light_theme }}";
-    }
+  // Check localStorage for saved theme preference
+  let savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    return savedTheme === 'dark' ? "dark" : "light";
+  }
 
-    // Use site default theme
-    let siteTheme = "{{ site.default_theme }}";
-    if (siteTheme === "dark") return "{{ site.giscus.dark_theme }}";
-    if (siteTheme === "light") return "{{ site.giscus.light_theme }}";
+  // Check if site has dark theme by default (based on document classes/styles)
+  const isDarkMode = document.documentElement.classList.contains('dark') || 
+                     document.body.classList.contains('dark') ||
+                     getComputedStyle(document.body).backgroundColor === 'rgb(33, 37, 41)'; // Bootstrap dark
+  
+  if (isDarkMode) return "dark";
 
-    // Fallback to system preference
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    return prefersDark ? "{{ site.giscus.dark_theme }}" : "{{ site.giscus.light_theme }}";
-  {% else %}
-    return "{{ site.giscus.light_theme }}";
-  {% endif %}
+  // Fallback to system preference
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  return prefersDark ? "dark" : "light";
 }
 
 (function setupGiscus() {
@@ -28,17 +22,17 @@ function determineGiscusTheme() {
 
   let giscusAttributes = {
     src: "https://giscus.app/client.js",
-    "data-repo": "{{ site.giscus.repo }}",
-    "data-repo-id": "{{ site.giscus.repo_id }}",
-    "data-category": "{{ site.giscus.category }}",
-    "data-category-id": "{{ site.giscus.category_id }}",
-    "data-mapping": "{{ site.giscus.mapping }}",
-    "data-strict": "{{ site.giscus.strict }}",
-    "data-reactions-enabled": "{{ site.giscus.reactions_enabled }}",
-    "data-emit-metadata": "{{ site.giscus.emit_metadata }}",
-    "data-input-position": "{{ site.giscus.input_position }}",
+    "data-repo": "allen5218/myblog",
+    "data-repo-id": "R_kgDOPaqk9Q",
+    "data-category": "Comments",
+    "data-category-id": "DIC_kwDOPaqk9c4Cuwao",
+    "data-mapping": "pathname",
+    "data-strict": "0",
+    "data-reactions-enabled": "1",
+    "data-emit-metadata": "0",
+    "data-input-position": "bottom",
     "data-theme": giscusTheme,
-    "data-lang": "{{ site.giscus.lang }}",
+    "data-lang": "zh-TW",
     crossorigin: "anonymous",
     async: true,
   };
@@ -54,7 +48,7 @@ function determineGiscusTheme() {
 function updateGiscusTheme(isDark) {
   const giscusFrame = document.querySelector("iframe.giscus-frame");
   if (giscusFrame) {
-    const theme = isDark ? "{{ site.giscus.dark_theme }}" : "{{ site.giscus.light_theme }}";
+    const theme = isDark ? "dark" : "light";
     giscusFrame.contentWindow.postMessage({
       giscus: {
         setConfig: {
