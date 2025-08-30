@@ -820,21 +820,59 @@ body.navbar-theme-excluded {
     color: #2c3e50 !important; // Whitespace: dark blue-gray
   }
   
-  // Variable types
-  .highlight .bp {
-    color: #e67e22 !important; // Builtin pseudo: orange (darker)
+  // Built-in names and classes - make yellow darker for better contrast
+  .highlight .nb {
+    color: #d68910 !important; // Name builtin: darker yellow (was #e5c07b)
   }
   
-  .highlight .vc {
-    color: #e67e22 !important; // Variable class: orange (darker)
+  .highlight .nc {
+    color: #d68910 !important; // Name class: darker yellow
   }
   
-  .highlight .vg {
-    color: #e67e22 !important; // Variable global: orange (darker)
+  .highlight .no {
+    color: #d68910 !important; // Name constant: darker yellow
+  }
+  
+  .highlight .nd {
+    color: #d68910 !important; // Name decorator: darker yellow
+  }
+  
+  .highlight .ni {
+    color: #d68910 !important; // Name entity: darker yellow
+  }
+  
+  .highlight .ne {
+    color: #d68910 !important; // Name exception: darker yellow
+  }
+  
+  .highlight .py {
+    color: #d68910 !important; // Name property: darker yellow (overriding previous orange)
+  }
+  
+  .highlight .nv {
+    color: #d68910 !important; // Name variable: darker yellow (overriding previous orange)
+  }
+  
+  // HTML/XML tags - make red darker
+  .highlight .nt {
+    color: #c0392b !important; // Name tag: darker red (was #e06c75)
   }
   
   .highlight .vi {
-    color: #e06c75 !important; // Variable instance: keep original red
+    color: #c0392b !important; // Variable instance: darker red (was #e06c75)
+  }
+  
+  // Variable types
+  .highlight .bp {
+    color: #d68910 !important; // Builtin pseudo: darker yellow (was orange)
+  }
+  
+  .highlight .vc {
+    color: #d68910 !important; // Variable class: darker yellow (was orange)
+  }
+  
+  .highlight .vg {
+    color: #d68910 !important; // Variable global: darker yellow (was orange)
   }
   
   // Diff colors - adjust for better contrast
