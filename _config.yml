@@ -4,7 +4,7 @@ SEOTitle: Allen的部落格 | Allen's Blog
 header-img: img/home-bg.webp
 email: 4103allen@gmail.com
 description: "这里是Allen的部落格，分享技術和生活"
-keyword: "Allen's Blog, 博客, 个人网站, 互联网, Web, JavaScript, React, 前端, Allen, 攝影, 部落格, 相機, ai, llm, 大模型, claude, gemini, n8n, 程式, docker, 容器化, k8s, 網路, opnsense, Kubernetes, 容器"
+keyword: "Allen's Blog, 博客, Allen, 攝影, 部落格, 相機, ai, llm, 大模型, claude, gemini, n8n, 程式, docker, 容器化, k8s, 網路, opnsense, Kubernetes, 容器"
 url: "https://blog.allenspace.dpdns.org" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
@@ -94,7 +94,7 @@ default_theme: "dark" # Options: "light" or "dark" - 設定網站的預設主題
 page-mathjax: false
 
 # Mermaid settings
-mermaid: true
+mermaid: false
 mermaid_version: "10.9.0"
 
 # Friends
