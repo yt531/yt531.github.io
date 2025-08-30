@@ -4,7 +4,7 @@ title:      "Blog Catalog 功能測試"
 subtitle:   "測試自動生成目錄功能是否正常工作"
 date:       2024-12-31 18:00:00
 author:     "allen5218"
-header-img: "img/bg3.jpg"
+header-img: "https://cdn.jsdelivr.net/gh/allen57218/img@main/img/20250830050705_evvnbpcj0l.webp"
 catalog: true
 tags:
     - 測試
