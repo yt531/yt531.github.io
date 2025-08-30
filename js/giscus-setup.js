@@ -26,7 +26,7 @@ function determineGiscusTheme() {
     "data-repo-id": "R_kgDOPaqk9Q",
     "data-category": "Comments",
     "data-category-id": "DIC_kwDOPaqk9c4Cuwao",
-    "data-mapping": "pathname",
+    "data-mapping": "title",
     "data-strict": "0",
     "data-reactions-enabled": "1",
     "data-emit-metadata": "0",
