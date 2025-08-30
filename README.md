@@ -6,7 +6,7 @@
 
 ## 簡介
 
-本項目是 Fork 自 [Hux Blog](https://huangxuan.me)，在原版的基礎上添加了 Mermaid 支援（已升級至 Mermaid 10.9.0 並支援自動深色模式切換），修復了原版 blog 的 LaTeX 顯示問題，支援文章更新時間。參考自 [Elmagnifico's Blog](https://github.com/elmagnificogi/elmagnificogi.github.io)
+本項目是 Fork 自 [Hux Blog](https://huangxuan.me)，在原版的基礎上添加了 Mermaid 支援（已升級至 Mermaid 10.9.0 ~~並支援自動深色模式切換~~），修復了原版 blog 的 LaTeX 顯示問題，支援文章更新時間。參考自 [Elmagnifico's Blog](https://github.com/elmagnificogi/elmagnificogi.github.io)
 
 本項目通過 Jekyll 在 GitHub Pages 上搭建 Blog 系統。Jekyll 是一個靜態網站生成器（Static Site Generator, SSG），它能將 Markdown、HTML、Liquid 模板等內容轉換成靜態網頁，Jekyll 會將你的文件內容加入你選擇主題的布局樣式中，最後產生屬於你的靜態部落格網站。
 
@@ -16,7 +16,7 @@
 
 | **Feature**                      | 進度     |
 | -------------------------------- | -------- |
-| **添加深色模式**                 | 還沒做   |
+| **~~添加深色模式~~**                 | Done   |
 
 
 ## 部署
