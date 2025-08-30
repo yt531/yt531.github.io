@@ -5,7 +5,7 @@ header-img: img/home-bg.webp
 email: 4103allen@gmail.com
 description: "这里是Allen的部落格，分享技術和生活"
 keyword: "Allen's Blog, 博客, Allen, 攝影, 部落格, 相機, ai, llm, 大模型, claude, gemini, n8n, 程式, docker, 容器化, k8s, 網路, opnsense, Kubernetes, 容器"
-url: "https://blog.allenspace.dpdns.org" # your host, for absolute URL
+url: "https://blog.allenspace.de" # your host, for absolute URL
 baseurl: "" # for example, '/blog' if your blog hosted on 'host/blog'
 
 # Publish posts or collection documents with a future date.
@@ -86,7 +86,7 @@ netease_comment: false
 
 # Google Analytics
 ga_track_id: "G-M2HR0MGKVL" # GA4 Format: G-xxxxxxxxxx
-ga_domain: blog.allenspace.dpdns.org
+ga_domain: blog.allenspace.de
 # 舊的 UA 格式  google_analytics: UA-xxxxxx-xx  
 # 新的 GA4 格式  google_analytics: G-xxxxxxxxxx
 

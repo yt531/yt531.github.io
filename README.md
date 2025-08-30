@@ -1,4 +1,4 @@
-# [Allen's Blog](https://blog.allenspace.dpdns.org/)
+# [Allen's Blog](https://blog.allenspace.de/)
 
 ![Blog Desktop Screenshot](http://huangxuan.me/img/blog-desktop.jpg)
 
