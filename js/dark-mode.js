@@ -49,6 +49,8 @@
         
         // Update Disqus theme if present
         updateDisqusTheme(theme);
+        // Update Giscus theme if present
+        updateGiscusTheme(theme);
     }
 
     // Check if current page should skip navbar theme switching
@@ -87,6 +89,8 @@
         }
         
         updateDisqusTheme(theme);
+        // Update Giscus theme if present  
+        updateGiscusTheme(theme);
     }
 
     // Toggle theme with debounce protection
@@ -129,6 +133,23 @@
             } catch (e) {
                 console.log('Disqus theme update failed:', e);
             }
+        }
+    }
+
+    // Update Giscus theme
+    function updateGiscusTheme(theme) {
+        const giscusFrame = document.querySelector('iframe.giscus-frame');
+        if (giscusFrame) {
+            const isDark = theme === DARK_THEME;
+            const giscusTheme = isDark ? 'dark' : 'light';
+            
+            giscusFrame.contentWindow.postMessage({
+                giscus: {
+                    setConfig: {
+                        theme: giscusTheme
+                    }
+                }
+            }, 'https://giscus.app');
         }
     }
 

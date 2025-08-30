@@ -1,16 +1,15 @@
 function determineGiscusTheme() {
-  // Check localStorage for saved theme preference
-  let savedTheme = localStorage.getItem('theme');
+  // Use the same theme key as dark-mode.js for consistency
+  const THEME_KEY = 'blog-theme';
+  let savedTheme = localStorage.getItem(THEME_KEY);
+  
   if (savedTheme) {
     return savedTheme === 'dark' ? "dark" : "light";
   }
 
-  // Check if site has dark theme by default (based on document classes/styles)
-  const isDarkMode = document.documentElement.classList.contains('dark') || 
-                     document.body.classList.contains('dark') ||
-                     getComputedStyle(document.body).backgroundColor === 'rgb(33, 37, 41)'; // Bootstrap dark
-  
-  if (isDarkMode) return "dark";
+  // Check if site has data-theme attribute (set by dark-mode.js)
+  const dataTheme = document.documentElement.getAttribute('data-theme');
+  if (dataTheme === 'dark') return "dark";
 
   // Fallback to system preference
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -44,22 +43,6 @@ function determineGiscusTheme() {
   document.getElementById("giscus_thread").appendChild(giscusScript);
 })();
 
-// Function to update giscus theme when site theme changes
-function updateGiscusTheme(isDark) {
-  const giscusFrame = document.querySelector("iframe.giscus-frame");
-  if (giscusFrame) {
-    const theme = isDark ? "dark" : "light";
-    giscusFrame.contentWindow.postMessage({
-      giscus: {
-        setConfig: {
-          theme: theme
-        }
-      }
-    }, "https://giscus.app");
-  }
-}
-
-// Make the function globally available for theme switching
-if (typeof window !== 'undefined') {
-  window.updateGiscusTheme = updateGiscusTheme;
-}
+// Note: Giscus theme switching is now handled by dark-mode.js
+// through the updateGiscusTheme() function integrated with the site's
+// theme toggle system.
