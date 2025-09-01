@@ -5,7 +5,8 @@ subtitle:   "Markdown,blog"
 date:       2021-04-30
 update:     2025-08-13
 author:     "elmagnifico"
-header-img: "img/bg7.jpg"
+header-img: ""
+header-bg-css: "linear-gradient(to right, #1e3a8a, #3b82f6);"
 catalog:    true
 mathjax:    true
 tags:
