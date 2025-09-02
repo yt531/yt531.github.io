@@ -57,9 +57,10 @@
     function shouldSkipNavbarTheme() {
         // Get page front matter variables
         const hasHeaderImg = window.pageHeaderImg !== undefined && window.pageHeaderImg !== '';
+        const hasHeaderBgCss = window.pageHeaderBgCss !== undefined && window.pageHeaderBgCss !== '';
         
-        // If header-img is set, skip navbar theme switching
-        return hasHeaderImg;
+        // If header-img or header-bg-css is set, skip navbar theme switching
+        return hasHeaderImg || hasHeaderBgCss;
     }
 
     // Apply conditional theme logic based on page front matter
