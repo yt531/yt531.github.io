@@ -72,13 +72,7 @@ rake post title="Hello 2015" subtitle="Hello World, Hello Blog"
 
 #### 進階配置：
 
-1. 使用*文字樣式*標題，如[這個範例](https://huangxuan.me/2020/04/03/react-hooks-vue-composition)：
-
-```yml
-header-style: text 
-```
-
-2. 開啟 LaTeX 支援：
+1. 開啟 LaTeX 支援：
 
 ```yml
 mathjax: true
@@ -86,7 +80,7 @@ mathjax: true
 詳細可以看這裡 
 > http://github.elmagnifico.tech/2021/04/30/Typora-LaTex-Mathjax/
 
-3. 開啟 Mermaid 10.9.0 圖表支援：
+2. 開啟 Mermaid 10.9.0 圖表支援：
 
 ```yml
 mermaid: true
@@ -100,7 +94,7 @@ mermaid: true
 - 更好的效能和安全性
 - 可通過 `_config.yml` 中的 `mermaid_version` 設定版本號
 
-4. 添加更新時間：
+3. 添加更新時間：
 
 ```yml
 update: 2023-12-01 10:30:00

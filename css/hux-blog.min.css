@@ -1,3 +1,8 @@
+/*!
+ * Hux Blog v1.8.2 (http://huxpro.github.io)
+ * Copyright 2025 Hux <huxpro@gmail.com>
+ */
+
 @media (min-width: 1200px) {
   .post-container,
   .sidebar-container {
@@ -1078,23 +1083,6 @@ footer .copyright a:focus {
 .side-catalog .catalog-body .active a {
   color: var(--catalog-active-link) !important;
 }
-[data-theme="dark"] .intro-header.style-text .site-heading,
-[data-theme="dark"] .intro-header.style-text .post-heading,
-[data-theme="dark"] .intro-header.style-text .page-heading {
-  color: var(--text-color) !important;
-}
-[data-theme="dark"] .intro-header.style-text .tags a,
-[data-theme="dark"] .intro-header.style-text .tags .tag {
-  border-color: var(--text-color) !important;
-  color: var(--text-color) !important;
-}
-[data-theme="dark"] .intro-header.style-text .tags a:hover,
-[data-theme="dark"] .intro-header.style-text .tags .tag:hover,
-[data-theme="dark"] .intro-header.style-text .tags a:active,
-[data-theme="dark"] .intro-header.style-text .tags .tag:active {
-  background-color: var(--tag-hover-bg) !important;
-  color: #ffffff !important;
-}
 .pager li > a,
 .pager li > span {
   background-color: var(--post-bg) !important;
@@ -1117,15 +1105,15 @@ footer .copyright a:focus {
   background-color: var(--tag-bg) !important;
   color: var(--text-muted) !important;
 }
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags a,
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag {
+body.navbar-theme-excluded .intro-header .tags a,
+body.navbar-theme-excluded .intro-header .tags .tag {
   border-color: rgba(255, 255, 255, 0.8) !important;
   color: #ffffff !important;
 }
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags a:hover,
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:hover,
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags a:active,
-body.navbar-theme-excluded .intro-header:not(.style-text) .tags .tag:active {
+body.navbar-theme-excluded .intro-header .tags a:hover,
+body.navbar-theme-excluded .intro-header .tags .tag:hover,
+body.navbar-theme-excluded .intro-header .tags a:active,
+body.navbar-theme-excluded .intro-header .tags .tag:active {
   color: white !important;
   border-color: white !important;
   background-color: rgba(255, 255, 255, 0.4) !important;
@@ -1820,31 +1808,6 @@ article .post-container h2::before {
   -o-background-size: cover;
   margin-bottom: 0px;
   /* 0 on mobile, modify by Hux */
-}
-.intro-header.style-text {
-  background: none;
-}
-.intro-header.style-text .site-heading,
-.intro-header.style-text .post-heading,
-.intro-header.style-text .page-heading {
-  padding: 85px 0 20px;
-  color: #404040;
-}
-.intro-header.style-text .site-heading .subheading,
-.intro-header.style-text .post-heading .subheading,
-.intro-header.style-text .page-heading .subheading {
-  margin-bottom: 15px;
-}
-.intro-header.style-text .tags a,
-.intro-header.style-text .tags .tag {
-  border-color: #404040;
-  color: #404040;
-}
-.intro-header.style-text .tags a:hover,
-.intro-header.style-text .tags .tag:hover,
-.intro-header.style-text .tags a:active,
-.intro-header.style-text .tags .tag:active {
-  background-color: rgba(0, 0, 0, 0.05);
 }
 @media only screen and (min-width: 768px) {
   .intro-header {

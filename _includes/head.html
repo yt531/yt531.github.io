@@ -77,7 +77,6 @@
         
         // Pass page front matter variables to JavaScript for conditional theme logic
         window.pageHeaderImg = {% if page.header-img %}'{{ page.header-img }}'{% else %}undefined{% endif %};
-        window.pageHeaderStyle = {% if page.header-style %}'{{ page.header-style }}'{% else %}undefined{% endif %};
         window.defaultTheme = DEFAULT_THEME;
     })();
     </script>

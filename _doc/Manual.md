@@ -103,19 +103,13 @@ This command will automatially generate a sample post similar as above under the
 
 There are a bunch of _advanced_ configs:
 
-1. a _text style_ header like [this](https://huangxuan.me/2019/09/08/spacemacs-workflow/) with
-
-```yml
-header-style: text 
-```
-
-2. Turning on Latex support:
+1. Turning on Latex support:
 
 ```yml
 mathjax: true
 ```
 
-3. Adding a mask to the header picture:
+2. Adding a mask to the header picture:
 
 ```yml
 header-mask: 0.3
@@ -280,7 +274,7 @@ Shout out to [@kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-
 - MathJax support by @Voleking in #80. I choose to use the SVG renderer though. See [Mathjax, kramdown and Octopress](https://www.lucypark.kr/blog/2013/02/25/mathjax-kramdown-and-octopress/) for writing and escaping details.
 - Open Graph Protocol support by @Android-KitKat in #253
 - `header-img-credit` and `header-img-credit-href`
-- `nav-style: invert` and `header-style: text`
+- `nav-style: invert`
 
 #### V1.7
 

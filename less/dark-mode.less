@@ -521,26 +521,6 @@ footer .copyright a {
   }
 }
 
-// Intro header text style - only apply to dark mode, let light mode use original styles
-[data-theme="dark"] .intro-header.style-text {
-  .site-heading,
-  .post-heading,
-  .page-heading {
-    color: var(--text-color) !important;
-  }
-  
-  .tags {
-    a, .tag {
-      border-color: var(--text-color) !important;
-      color: var(--text-color) !important;
-      &:hover,
-      &:active {
-        background-color: var(--tag-hover-bg) !important;
-        color: #ffffff !important;
-      }
-    }
-  }
-}
 
 // Pager (Previous/Next buttons) dark mode
 .pager {
@@ -577,7 +557,7 @@ footer .copyright a {
 // For pages with header-img (background image), keep tags white in both light and dark modes
 // This is controlled by the navbar-theme-excluded class added by dark-mode.js
 body.navbar-theme-excluded {
-  .intro-header:not(.style-text) {
+  .intro-header {
     .tags {
       a, .tag {
         border-color: rgba(255, 255, 255, 0.8) !important;

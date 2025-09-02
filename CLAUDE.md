@@ -33,7 +33,6 @@ Posts support these key front matter options:
 - `layout: post` - Standard blog post layout
 - `layout: keynote` - Special layout for HTML presentations with `iframe` parameter
 - `header-img` - Header background image path
-- `header-style: text` - Use text-style header instead of image
 - `mathjax: true` - Enable LaTeX math rendering
 - `mermaid: true` - Enable Mermaid 10.9.0 diagram support with automatic dark theme adaptation
 - `catalog: true` - Enable table of contents
