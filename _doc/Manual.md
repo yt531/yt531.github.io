@@ -198,37 +198,37 @@ Because most of the keynote framework prevent the browser default scroll behavio
 
 > Help Wanted: Moving to a Github-based solution.
 
-Currently, [Disqus](http://disqus.com) <del> and [Duoshuo](http://duoshuo.com)</del> are supported as third party discussion system.
+Currently, [Disqus](http://disqus.com) and [Giscus](https://giscus.app/) are supported as third party discussion systems.
 
 First of all, you need to sign up and get your own account. **Repeat, DO NOT use mine!** (I have set Trusted Domains) It is deathly simple to sign up and you will get the full power of management system. Please give it a try!
 
 Second, from V1.5, you can easily complete your comment configuration by just adding your **short name** into `_config.yml`:
 
 ```yml
-duoshuo_username: _your_duoshuo_short_name_
-# OR
 disqus_username: _your_disqus_short_name_
+# OR for modern GitHub-based comments
+giscus:
+  repo: your-github-username/your-repo-name
+  repo_id: your_repo_id
+  category: Comments
+  category_id: your_category_id
 ```
 
 **To the old version user**, it's better that you pull the new version, otherwise you have to replace code in `post.html`, `keynote.html` and `about.html` on your own.
 
-<del>Furthermore, Duoshuo support Sharing. if you only wanna use Duoshuo comment without sharing, you can set `duoshuo_share: false`. </del>
 
 
 ### Analytics
 
-From V1.5, Google Analytics and Baidu Tongji are supported with a simple config away:
+Google Analytics GA4 is supported with a simple config:
 
 ```yml
-# Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
-
 # Google Analytics
 ga_track_id: 'G-xxxxxxxxxx'            # GA4 Format: G-xxxxxxxxxx
-ga_domain: huangxuan.me
+ga_domain: yourdomain.com
 ```
 
-Just checkout the code offered by Google/Baidu, and copy paste here, all the rest is already done for you.
+Just checkout the code offered by Google Analytics, and copy paste here, all the rest is already done for you.
 
 (Google might ask for meta tag `google-site-verification`)
 
@@ -238,7 +238,7 @@ Just checkout the code offered by Google/Baidu, and copy paste here, all the res
 Before V1.4, site setting `title` is not only used for displayed in Home Page and Navbar, but also used to generate the `<title>` in HTML.
 It's possible that you want the two things different. For me, my site-title is **“Hux Blog”** but I want the title shows in search engine is **“黄玄的博客 | Hux Blog”** which is multi-language.
 
-So, the SEO Title is introduced to solve this problem, you can set `SEOTitle` different from `title`, and it would be only used to generate HTML `<title>` and setting DuoShuo Sharing.
+So, the SEO Title is introduced to solve this problem, you can set `SEOTitle` different from `title`, and it would be only used to generate HTML `<title>` for search engines.
 
 
 FAQ
@@ -332,5 +332,4 @@ Shout out to [@kitian616/jekyll-TeXt-theme](https://github.com/kitian616/jekyll-
 - **Typographic optimization** for Chinese Fonts
 - **Network optimizaition** for China, dropping Google webfont, using local CDN
 - Using [Github Flavored Markdown](https://help.github.com/articles/github-flavored-markdown/)
-- Using Baidu, Tencent/QQ analytics
-- Using [DuoShuo](http://duoshuo.com/) as the Disqus-like third party discussion system
+- Modern analytics and comment systems support

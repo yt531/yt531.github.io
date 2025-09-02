@@ -58,7 +58,7 @@ $ git clone git@github.com:Huxpro/huxblog-boilerplate.git
 	* [推荐标签](#featured-tags)
 	* [好友链接](#friends)
 	* [HTML5 演示文档布局](#keynote-layout)
-* 评论与 Google/Baidu Analytics
+* 评论与 Google Analytics
 	* [评论](#comment)
 	* [网站分析](#analytics) 
 * 高级部分
@@ -200,36 +200,36 @@ iframe在不同的设备中，将会自动的调整大小。保留内边距是�
 
 #### Comment
 
-博客不仅支持多说[Duoshuo](http://duoshuo.com)评论系统，也支持[Disqus](http://disqus.com)评论系统。
+博客支持现代评论系统，包括 [Disqus](http://disqus.com) 和 [Giscus](https://giscus.app/)（基于 GitHub Discussions）。
 
-`Disqus`优点是：国际比较流行，界面也很大气、简介，如果有人评论，还能实时通知，直接回复通知的邮件就行了；缺点是：评论必须要去注册一个disqus账号，分享一般只有Facebook和Twitter，另外在墙内加载速度略慢了一点。想要知道长啥样，可以看以前的版本点[这里](http://brucezhaor.github.io/about.html) 最下面就可以看到。
+`Disqus` 优点是：国际比较流行，界面大气简洁，如果有人评论，还能实时通知，直接回复通知的邮件就行了；缺点是：评论必须要去注册一个 disqus 账号，在墙内加载速度略慢一点。
 
-`多说` 优点是：支持国内各主流社交软件(微博，微信，豆瓣，QQ空间 ...)一键分享按钮功能，另外登陆比较方便，管理界面也是纯中文的，相对于disqus全英文的要容易操作一些；缺点是：就是界面丑了一点。
-当然你是可以自定义界面的css的，详情请看多说开发者文档 http://dev.duoshuo.com/docs/5003ecd94cab3e7250000008 。
+`Giscus` 优点是：基于 GitHub Discussions，开源免费，支持 Markdown，与 GitHub 生态系统完美集成，支持多种主题；缺点是：需要 GitHub 账号。
 
-**首先**，你需要去注册一个账号，不管是disqus还是多说的。**不要直接使用我的啊！**
+**首先**，你需要去注册一个账号。**不要直接使用我的！**
 
-**其次**，你只需要在下面的yaml头文件中设置一下就可以了。
+**其次**，你只需要在 `_config.yml` 中设置一下就可以了：
 
-```
-duoshuo_username: _你的用户名_
-# 或者
+```yml
+# Disqus 评论
 disqus_username: _你的用户名_
-```
 
-**最后**多说是支持分享的，如果你不想分享，请这样设置：`duoshuo_share: false`。你可以同时使用两个评论系统，不过个人感觉怪怪的。
+# 或者使用 Giscus（推荐）
+giscus:
+  repo: 你的GitHub用户名/你的仓库名
+  repo_id: 你的仓库ID
+  category: Comments
+  category_id: 你的分类ID
+```
 
 #### Analytics
 
-网站分析，现在支持百度统计和Google Analytics。需要去官方网站注册一下，然后将返回的code贴在下面：
+网站分析现在支持 Google Analytics GA4。需要去 Google Analytics 官方网站注册一下，然后将返回的 tracking ID 贴在下面：
 
-```
-# Baidu Analytics
-ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
-
+```yml
 # Google Analytics
 ga_track_id: 'G-xxxxxxxxxx'            # GA4格式: G-xxxxxxxxxx (你用Google账号去注册一个就会给你一个这样的id)
-ga_domain: huangxuan.me			# 默认的是 auto, 这里我是自定义了的域名，你如果没有自己的域名，需要改成auto。
+ga_domain: yourdomain.com              # 你的域名，如果没有自定义域名，改成auto
 ```
 
 #### Customization
@@ -253,7 +253,7 @@ JavaScript 的压缩混淆、Less 的编译、Apache 2.0 许可通告的添加�
 
 我的博客标题是 **“Hux Blog”** 但是我想要在搜索的时候显示 **“黄玄的博客 | Hux Blog”** ，这个就需要SEO Title来定义了。
 
-其实这个SEO Title就是定义了<head><title>标题</title></head>这个里面的东西和多说分享的标题，你可以自行修改的。
+其实这个SEO Title就是定义了<head><title>标题</title></head>这个里面的东西，主要用于搜索引擎优化，你可以自行修改的。
 
 ## 致谢
 
