@@ -4,16 +4,16 @@ function determineGiscusTheme() {
   let savedTheme = localStorage.getItem(THEME_KEY);
   
   if (savedTheme) {
-    return savedTheme === 'dark' ? "dark" : "light";
+    return savedTheme === 'dark' ? "dark_dimmed" : "light";
   }
 
   // Check if site has data-theme attribute (set by dark-mode.js)
   const dataTheme = document.documentElement.getAttribute('data-theme');
-  if (dataTheme === 'dark') return "dark";
+  if (dataTheme === 'dark') return "dark_dimmed";
 
   // Fallback to system preference
   const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-  return prefersDark ? "dark" : "light";
+  return prefersDark ? "dark_dimmed" : "light";
 }
 
 (function setupGiscus() {
