@@ -39,6 +39,53 @@
 
 替換這個 Google 網站管理員的識別標籤，會影響收錄
 
+### Giscus 評論系統設定
+
+本項目使用 [Giscus](https://giscus.app/) 作為評論系統，基於 GitHub Discussions 提供互動功能。要為你的項目配置 Giscus，需要修改以下兩個文件：
+
+#### 1. 修改 `_config.yml` 檔案
+
+找到 `giscus` 區塊（約第 66 行），更新為你的倉庫資訊：
+
+```yml
+giscus:
+  repo: your-username/your-repo-name # 替換為你的 GitHub 用戶名和倉庫名
+  repo_id: YOUR_REPO_ID # 從 giscus.app 取得的倉庫 ID
+  category: Comments # Discussion 分類名稱（可自訂）
+  category_id: YOUR_CATEGORY_ID # 從 giscus.app 取得的分類 ID
+  mapping: pathname # 識別文章的方式，建議保持 pathname
+  strict: 0 # 使用嚴格識別模式（0=關閉，1=開啟）
+  reactions_enabled: 1 # 啟用 emoji 反應（0=關閉，1=開啟）
+  input_position: bottom # 輸入框位置（bottom 或 top）
+```
+
+#### 2. 修改 `js/giscus-setup.js` 檔案
+
+找到第 24-27 行的 `giscusAttributes` 配置，更新為你的設定：
+
+```javascript
+"data-repo": "your-username/your-repo-name", // 替換為你的倉庫
+"data-repo-id": "YOUR_REPO_ID", // 替換為你的 repo_id
+"data-category": "Comments", // 替換為你的分類名稱
+"data-category-id": "YOUR_CATEGORY_ID", // 替換為你的 category_id
+```
+
+#### 3. 設定步驟
+
+1. 前往 [giscus.app](https://giscus.app/) 
+2. 輸入你的 GitHub 倉庫（格式：`username/repo`）
+3. 選擇頁面 ↔️ discussions 映射關係（建議選擇「Discussion 的標題包含頁面的 `pathname`」）
+4. 選擇 Discussion 分類（建議新建一個 "Comments" 分類）
+5. 複製生成的設定到上述兩個文件中
+
+#### 4. 倉庫要求
+
+- 倉庫必須是**公開的**
+- 必須安裝 [giscus app](https://github.com/apps/giscus)
+- 必須開啟 Discussions 功能（在倉庫的 Settings → General → Features 中啟用）
+
+設定完成後，評論系統會自動適配網站的深色/淺色主題，深色模式使用 `dark_dimmed` 主題。
+
 ### Posts
 
 文章存放在 `_posts/` 目錄下的 Markdown 文件。
@@ -102,11 +149,24 @@ update: 2023-12-01 10:30:00
 
 使用 `update` 欄位可以記錄文章的最後更新時間。
 
+4. 使用 CSS 漸層背景：
+
+```yml
+header-bg-css: "linear-gradient(to right, #1e3a8a, #3b82f6);"
+```
+
+使用 `header-bg-css` 欄位可以為文章頁面設定自訂的 CSS 背景樣式，支援漸層、純色或其他 CSS 背景屬性。當設定了此欄位時，會覆蓋 `header-img` 的背景圖片設定，讓你能夠創建更豐富的視覺效果。
+
+常見的 CSS 背景樣式範例：
+- 線性漸層：`"linear-gradient(45deg, #ff6b6b, #4ecdc4);"`
+- 徑向漸層：`"radial-gradient(circle, #667eea, #764ba2);"`
+- 純色背景：`"#2c3e50;"`
+- 多重漸層：`"linear-gradient(135deg, #667eea 0%, #764ba2 100%);"`
+
+
 ### 使用Keynote
 
 ![](http://huangxuan.me/img/blog-keynote.jpg)
-
-使用網頁技術（如 Reveal.js、Impress.js、Slides、Prezi 等）來製作主題演講和簡報的趨勢日益增長。我認為現代部落格應該支援嵌入這些基於 HTML 的簡報。
 
 使用方法，在markdown的**前置內容**中加入：
 
@@ -119,7 +179,7 @@ iframe:     "http://huangxuan.me/js-module-7day/"
 
 `iframe` 元素會自動調整大小以適應不同的外觀尺寸和設備方向。
 
-由於大多數Keynote框架會阻止瀏覽器的預設滾動行為，因此設定了底部內留白來幫助使用者，並提示使用者下方可能還有更多內容。
+由於大多數Keynote框架會阻止瀏覽器的預設滾動行為，因此設定了底部內留白來支援滾動，並提示使用者下方還有更多內容。
 
 ## 鳴謝
 
