@@ -14,6 +14,7 @@
   margin: 0 auto !important;
 }
 
+
 /* Override blog link colors in mermaid diagrams */
 .post-container .language-mermaid a {
   color: inherit !important;
@@ -41,4 +42,20 @@
   
   // 初始化所有mermaid圖表
   mermaid.init(undefined, document.querySelectorAll('.language-mermaid'));
+  
+  // 在圖表渲染後處理甘特圖的橫向滾動
+  document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+      document.querySelectorAll('.language-mermaid').forEach(container => {
+        const svg = container.querySelector('svg');
+        if (svg && svg.querySelector('g.grid')) {
+          // 這是甘特圖，啟用橫向滾動
+          container.style.overflowX = 'auto';
+          container.style.webkitOverflowScrolling = 'touch';
+          svg.style.maxWidth = 'none';
+          svg.style.minWidth = '100%';
+        }
+      });
+    }, 1000); // 等待圖表完全渲染
+  });
 </script>
