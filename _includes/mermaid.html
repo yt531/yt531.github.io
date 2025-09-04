@@ -2,19 +2,16 @@
 /* Mermaid CSS isolation - lightweight fixes only */
 .language-mermaid {
   /* Override post-container img styles for mermaid SVGs */
-  text-align: left;
+  text-align: center;
   margin: 1.5em 0;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .language-mermaid svg {
-  /* Fix SVG display issues - preserve original width for scrolling */
-  width: auto !important;
-  max-width: none !important;
+  /* Fix SVG display issues */
+  max-width: 100% !important;
   height: auto !important;
   display: block;
-  margin: 0 !important;
+  margin: 0 auto !important;
 }
 
 /* Override blog link colors in mermaid diagrams */
