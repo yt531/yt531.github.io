@@ -4,11 +4,14 @@
   /* Override post-container img styles for mermaid SVGs */
   text-align: center;
   margin: 1.5em 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
 }
 
 .language-mermaid svg {
   /* Fix SVG display issues */
-  max-width: 100% !important;
+  max-width: none !important;
+  min-width: 100%;
   height: auto !important;
   display: block;
   margin: 0 auto !important;
