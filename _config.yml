@@ -13,6 +13,7 @@ future: true
 
 # SNS settings
 RSS: true
+sitemap: true
 #weibo_username: huxpro
 #zhihu_username: huxpro
 github_username: allen5218
