@@ -29,7 +29,6 @@
 
 ### 要修改以下檔案的內容
 
-- ads.txt 的值替換成你自己的
 - _config.yml 的 Google Analytics tracking ID 替換成你自己的
 - head.html 中有一個
 
