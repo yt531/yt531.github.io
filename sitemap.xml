@@ -1,7 +1,7 @@
 ---
 layout: null
 ---
-{% if site.sitemap %}
+{%- if site.sitemap -%}
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- 首頁 -->
@@ -11,27 +11,25 @@ layout: null
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-  
-  <!-- 靜態頁面 -->
-  {% for page in site.pages %}
-    {% if page.layout and page.url != '/404.html' and page.url != '/offline.html' %}
-    <url>
-      <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
-      <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
-      <changefreq>{% if page.url == '/about.html' %}monthly{% elsif page.url == '/archive.html' %}weekly{% else %}monthly{% endif %}</changefreq>
-      <priority>{% if page.url == '/about.html' %}0.9{% elsif page.url == '/archive.html' %}0.8{% else %}0.7{% endif %}</priority>
-    </url>
-    {% endif %}
-  {% endfor %}
-  
-  <!-- 文章頁面 -->
-  {% for post in site.posts %}
+  {%- for page in site.pages -%}
+    {%- if page.layout and page.url != '/404.html' and page.url != '/offline.html' -%}
+  <!-- 靜態頁面: {{ page.url }} -->
+  <url>
+    <loc>{{ site.url }}{{ site.baseurl }}{{ page.url }}</loc>
+    <lastmod>{{ site.time | date_to_xmlschema }}</lastmod>
+    <changefreq>{%- if page.url == '/about.html' -%}monthly{%- elsif page.url == '/archive.html' -%}weekly{%- else -%}monthly{%- endif -%}</changefreq>
+    <priority>{%- if page.url == '/about.html' -%}0.9{%- elsif page.url == '/archive.html' -%}0.8{%- else -%}0.7{%- endif -%}</priority>
+  </url>
+    {%- endif -%}
+  {%- endfor -%}
+  {%- for post in site.posts -%}
+  <!-- 文章: {{ post.title }} -->
   <url>
     <loc>{{ site.url }}{{ site.baseurl }}{{ post.url }}</loc>
     <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  {% endfor %}
+  {%- endfor -%}
 </urlset>
-{% endif %}
+{%- endif -%}
