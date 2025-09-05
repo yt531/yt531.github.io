@@ -731,8 +731,8 @@ pre.highlight {
   --tag-text: #e0e0e0;
   --tag-hover-bg: #4db8d1;
   --back-top-bg: rgba(45, 45, 45, 0.9);
-  --back-top-border: #e0e0e0;
-  --back-top-text: #e0e0e0;
+  --back-top-border: #bfbfbf;
+  --back-top-text: #bfbfbf;
   --back-top-hover-bg: #4db8d1;
   --back-top-hover-border: #4db8d1;
   --back-top-hover-text: #ffffff;
