@@ -6,7 +6,16 @@
 
 ## 簡介
 
-本項目是 Fork 自 [Hux Blog](https://huangxuan.me)，在原版的基礎上添加了 Mermaid 支援（已升級至 Mermaid 10.9.0 ~~並支援自動深色模式切換~~），修復了原版 blog 的 LaTeX 顯示問題，支援文章更新時間。參考自 [Elmagnifico's Blog](https://github.com/elmagnificogi/elmagnificogi.github.io)
+本項目是 Fork 自 [Hux Blog](https://huangxuan.me)，在原版的基礎上添加了多項增強功能：
+
+### 🚀 主要特色
+- **Mermaid 圖表支援**：已升級至 Mermaid 10.9.0
+- **LaTeX 數學公式**：修復原版顯示問題，完美支援數學公式渲染
+- **文章更新時間**：支援顯示文章的最後更新時間
+- **RSS 訂閱**：自動生成 RSS 2.0 格式的內容訂閱源
+- **XML Sitemap**：SEO 優化的網站地圖，幫助搜尋引擎索引
+- **深色模式**：完整的深色主題支援
+- **Giscus 評論系統**：基於 GitHub Discussions 的現代評論系統
 
 本項目通過 Jekyll 在 GitHub Pages 上搭建 Blog 系統。Jekyll 是一個靜態網站生成器（Static Site Generator, SSG），它能將 Markdown、HTML、Liquid 模板等內容轉換成靜態網頁，Jekyll 會將你的文件內容加入你選擇主題的布局樣式中，最後產生屬於你的靜態部落格網站。
 
@@ -161,6 +170,43 @@ header-bg-css: "linear-gradient(to right, #1e3a8a, #3b82f6);"
 - 徑向漸層：`"radial-gradient(circle, #667eea, #764ba2);"`
 - 純色背景：`"#2c3e50;"`
 - 多重漸層：`"linear-gradient(135deg, #667eea 0%, #764ba2 100%);"`
+
+### RSS 訂閱 & XML Sitemap
+
+本部落格內建 RSS 訂閱和 XML Sitemap 功能，幫助讀者訂閱內容和搜尋引擎索引。
+
+#### RSS 設定
+在 `_config.yml` 中啟用 RSS 功能：
+```yml
+RSS: true
+```
+
+啟用後，RSS 訂閱源將在 `/feed.xml` 提供，包含：
+- 最新 10 篇文章
+- 完整文章內容
+- 文章標籤和分類
+- RSS 2.0 標準格式
+
+#### Sitemap 設定
+在 `_config.yml` 中啟用 Sitemap 功能：
+```yml
+sitemap: true
+```
+
+啟用後，XML sitemap 將在 `/sitemap.xml` 提供，包含：
+- 網站首頁和所有靜態頁面
+- 所有部落格文章
+- 適當的優先度和更新頻率設定
+- 符合 XML Sitemap 0.9 標準
+
+**優先度設定：**
+- 首頁：1.0（每週更新）
+- 關於頁面：0.9（每月更新）
+- 存檔頁面：0.8（每週更新）
+- 其他靜態頁面：0.7（每月更新）
+- 部落格文章：0.6（每年更新）
+
+這兩個功能都使用無插件的自訂 Jekyll 模板實作，無需額外的 gem 依賴。
 
 
 ### 使用Keynote

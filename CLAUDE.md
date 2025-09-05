@@ -53,6 +53,8 @@ Key `_config.yml` settings:
 - **Jekyll**: Uses kramdown markdown processor with syntax highlighting
 - **Mermaid**: Version 10.9.0 with configurable version (`mermaid_version`) and automatic dark theme support
 - **Theme**: `default_theme: "dark"` controls both site theme and mermaid diagram themes
+- **RSS**: `RSS: true` enables RSS feed at `/feed.xml`
+- **Sitemap**: `sitemap: true` enables XML sitemap at `/sitemap.xml`
 
 ### Special Features
 - **Keynote Support**: Embed HTML presentations using iframe layout
@@ -61,6 +63,8 @@ Key `_config.yml` settings:
 - **Search**: JSON-based search functionality
 - **PWA**: Progressive Web App with service worker and manifest
 - **Mermaid Diagrams**: Unified handling through `_includes/mermaid.html` with automatic theme switching and dynamic re-rendering support
+- **RSS Feed**: Automatic RSS 2.0 feed generation for content syndication
+- **XML Sitemap**: SEO-optimized sitemap generation for search engine indexing
 
 ### Mermaid Configuration
 The blog uses a centralized mermaid configuration system:
@@ -69,5 +73,31 @@ The blog uses a centralized mermaid configuration system:
 - **Theme Adaptation**: Automatically switches between `dark` and `default` themes based on site configuration
 - **Dynamic Updates**: Global `updateMermaidTheme(isDark)` function for runtime theme switching
 - **Supported Charts**: flowcharts, sequence diagrams, gantt charts, class diagrams, mindmaps, timelines, and more
+
+### RSS & Sitemap Configuration
+The blog includes automatic RSS and sitemap generation:
+
+#### RSS Feed (`feed.xml`)
+- **Location**: Available at `/feed.xml`
+- **Format**: RSS 2.0 standard with full content
+- **Content**: Latest 10 posts with titles, descriptions, publication dates
+- **Features**: Includes post tags, categories, and permalinks
+- **Control**: Enable/disable with `RSS: true/false` in `_config.yml`
+
+#### XML Sitemap (`sitemap.xml`)
+- **Location**: Available at `/sitemap.xml`
+- **Format**: XML Sitemap 0.9 standard for search engines
+- **Content**: All pages including homepage, static pages, and posts
+- **Priority Scheme**:
+  - Homepage: 1.0 (weekly updates)
+  - About page: 0.9 (monthly updates)
+  - Archive page: 0.8 (weekly updates)
+  - Other static pages: 0.7 (monthly updates)
+  - Blog posts: 0.6 (yearly updates)
+- **Exclusions**: 404.html and offline.html pages are excluded
+- **Control**: Enable/disable with `sitemap: true/false` in `_config.yml`
+- **Implementation**: Plugin-free custom Jekyll template similar to RSS logic
+
+Both systems use conditional rendering and will only generate content when their respective configuration flags are enabled.
 
 When modifying posts, ensure proper YAML front matter format and follow existing conventions for tags, images, and metadata.
