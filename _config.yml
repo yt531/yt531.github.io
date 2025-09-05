@@ -80,8 +80,8 @@ giscus:
 
 # Analytics settings
 # Google Analytics
-ga_track_id: "G-M2HR0MGKVL" # GA4 Format: G-xxxxxxxxxx
-ga_domain: blog.allenspace.de
+ga_track_id: "G-" # GA4 Format: G-xxxxxxxxxx
+ga_domain: yt531.github.io/
 # 舊的 UA 格式  google_analytics: UA-xxxxxx-xx  
 # 新的 GA4 格式  google_analytics: G-xxxxxxxxxx
 
