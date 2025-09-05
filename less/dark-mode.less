@@ -21,7 +21,8 @@
   --post-link-hover: #0085a1;
   --border-color: #ececec;
   --table-border: #eee;
-  --blockquote-color: gray;
+  --blockquote-color: #404040;
+  --blockquote-bg: #f8f8f8;
   --tag-bg: #f3f5f5;
   --tag-text: #404040;
   --tag-hover-bg: #0085a1;
@@ -58,7 +59,8 @@
   --post-link-hover: #66c7e0;
   --border-color: #333333;
   --table-border: #333333;
-  --blockquote-color: #888888;
+  --blockquote-color: #e0e0e0;
+  --blockquote-bg: #3a3a3a;
   --tag-bg: #333333;
   --tag-text: #e0e0e0;
   --tag-hover-bg: #4db8d1;
@@ -361,6 +363,10 @@ a {
 // Blockquotes
 blockquote {
   color: var(--blockquote-color) !important;
+  background-color: var(--blockquote-bg) !important;
+  padding: 15px 20px !important;
+  border-radius: 5px !important;
+  margin: 20px 0 !important;
 }
 
 // Tables
