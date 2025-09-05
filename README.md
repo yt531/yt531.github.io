@@ -8,7 +8,6 @@
 
 本項目是 Fork 自 [Hux Blog](https://huangxuan.me)，在原版的基礎上添加了多項增強功能：
 
-### 🚀 主要特色
 - **Mermaid 圖表支援**：已升級至 Mermaid 10.9.0
 - **LaTeX 數學公式**：修復原版顯示問題，完美支援數學公式渲染
 - **文章更新時間**：支援顯示文章的最後更新時間
@@ -45,11 +44,11 @@
 <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
 ```
 
-替換這個 Google 網站管理員的識別標籤，會影響收錄
+替換這個 Google Search Console的識別標籤，會影響網站收錄
 
 ### Giscus 評論系統設定
 
-本項目使用 [Giscus](https://giscus.app/) 作為評論系統，基於 GitHub Discussions 提供互動功能。要為你的項目配置 Giscus，需要修改以下兩個文件：
+本項目使用 [Giscus](https://giscus.app/) 作為主要評論系統，基於 GitHub Discussions 提供互動功能。要為你的項目配置 Giscus，需要修改以下兩個文件：
 
 #### 1. 修改 `_config.yml` 檔案
 
@@ -57,10 +56,10 @@
 
 ```yml
 giscus:
-  repo: your-username/your-repo-name # 替換為你的 GitHub 用戶名和倉庫名
-  repo_id: YOUR_REPO_ID # 從 giscus.app 取得的倉庫 ID
-  category: Comments # Discussion 分類名稱（可自訂）
-  category_id: YOUR_CATEGORY_ID # 從 giscus.app 取得的分類 ID
+  repo: your-username/your-repo-name # 替換為你要設定存放的 GitHub 用戶名和倉庫名
+  repo_id: YOUR_REPO_ID # 替換為從 giscus.app 取得的倉庫 ID
+  category: Comments # 替換為你要設定存放的 GitHub Discussion 分類名稱
+  category_id: YOUR_CATEGORY_ID # 替換為從 giscus.app 取得的分類 ID
   mapping: pathname # 識別文章的方式，建議保持 pathname
   strict: 0 # 使用嚴格識別模式（0=關閉，1=開啟）
   reactions_enabled: 1 # 啟用 emoji 反應（0=關閉，1=開啟）
@@ -72,10 +71,10 @@ giscus:
 找到第 24-27 行的 `giscusAttributes` 配置，更新為你的設定：
 
 ```javascript
-"data-repo": "your-username/your-repo-name", // 替換為你的倉庫
-"data-repo-id": "YOUR_REPO_ID", // 替換為你的 repo_id
-"data-category": "Comments", // 替換為你的分類名稱
-"data-category-id": "YOUR_CATEGORY_ID", // 替換為你的 category_id
+"data-repo": "your-username/your-repo-name", // 替換為你要設定存放的 GitHub 用戶名和倉庫名
+"data-repo-id": "YOUR_REPO_ID", // 替換為從 giscus.app 取得的倉庫 ID
+"data-category": "Comments", // 替換為你要設定存放的 GitHub Discussion 分類名稱
+"data-category-id": "YOUR_CATEGORY_ID", // 替換為從 giscus.app 取得的分類 ID
 ```
 
 #### 3. 設定步驟
@@ -97,8 +96,8 @@ giscus:
 ### Posts
 
 文章存放在 `_posts/` 目錄下的 Markdown 文件。
-文章的元數據以 YAML 格式的*前置內容*列出。
-例如，[Hello 2015](https://huangxuan.me/2015/01/29/hello-2015/) 的前置內容如下：
+文章的元數據以 YAML 格式的*Front Matter*列出。
+例如，[Hello 2015](https://huangxuan.me/2015/01/29/hello-2015/) 的Front Matter如下：
 
 ```yml
 ---
@@ -213,7 +212,7 @@ sitemap: true
 
 ![](http://huangxuan.me/img/blog-keynote.jpg)
 
-使用方法，在markdown的**前置內容**中加入：
+使用方法，在markdown的**Front Matter**中加入：
 
 ```yml
 ---
