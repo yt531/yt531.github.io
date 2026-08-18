@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人網站 | Portfolio</title>
+    <meta name="description" content="這是一個展示個人作品與經歷的網站">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav>
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="#about">關於我</a></li>
+            <li><a href="#projects">專案作品</a></li>
+            <li><a href="#contact">聯絡方式</a></li>
+        </ul>
+    </nav>
+
+    <!-- 首頁橫幅區塊 -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>哈囉！我是 <span>開發者</span></h1>
+            <p>我熱愛寫程式、設計動態且現代化的網頁體驗，致力於將想法轉化為現實。</p>
+            <a href="#projects" class="btn">觀看我的作品</a>
+        </div>
+    </header>
+
+    <!-- 關於我區塊 -->
+    <section id="about">
+        <h2 class="section-title">關於我</h2>
+        <div class="projects-grid" style="grid-template-columns: 1fr; max-width: 800px;">
+            <div class="card" style="text-align: center;">
+                <p>我是一名熱愛技術的前端開發者。我喜歡使用現代化的技術棧（如 HTML5, CSS3, JavaScript 以及各式前端框架）來建立美觀且具備高互動性的網頁應用程式。不斷學習新知識是我前進的動力。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 專案作品區塊 -->
+    <section id="projects">
+        <h2 class="section-title">專案作品</h2>
+        <div class="projects-grid">
+            <!-- 專案 1 -->
+            <div class="card">
+                <h3>電子商務平台</h3>
+                <p>一個提供流暢購物體驗的現代化電商網站，具備購物車與金流串接功能。</p>
+                <div class="tech-tags">
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                </div>
+            </div>
+            <!-- 專案 2 -->
+            <div class="card">
+                <h3>個人任務管理 APP</h3>
+                <p>幫助使用者提升生產力的任務管理工具，具備響應式設計與深色模式。</p>
+                <div class="tech-tags">
+                    <span class="tag">React</span>
+                    <span class="tag">Node.js</span>
+                </div>
+            </div>
+            <!-- 專案 3 -->
+            <div class="card">
+                <h3>即時聊天系統</h3>
+                <p>運用 WebSocket 技術開發的即時聊天應用，支援群組聊天與檔案分享。</p>
+                <div class="tech-tags">
+                    <span class="tag">Vue</span>
+                    <span class="tag">Socket.io</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯絡方式區塊 -->
+    <section id="contact">
+        <h2 class="section-title">聯絡我</h2>
+        <div class="projects-grid" style="grid-template-columns: 1fr; max-width: 600px; text-align: center;">
+            <div class="card">
+                <p>準備好開始下一個偉大的專案了嗎？歡迎隨時與我聯繫！</p>
+                <br>
+                <a href="mailto:example@gmail.com" class="btn" style="padding: 0.8rem 2rem;">寄信給我</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p>&copy; 2026 MyPortfolio. All rights reserved.</p>
+    </footer>
+
+    <!-- 簡單的互動動畫腳本 -->
+    <script>
+        // 平滑滾動錨點
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
