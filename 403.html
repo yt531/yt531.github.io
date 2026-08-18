@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>403 Forbidden | 狀態碼</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .status-hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 5%;
+            position: relative;
+            overflow: hidden;
+        }
+        .status-hero::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: var(--primary);
+            filter: blur(200px);
+            border-radius: 50%;
+            opacity: 0.2;
+            top: -100px;
+            left: -100px;
+        }
+        .status-hero::after {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: var(--secondary);
+            filter: blur(200px);
+            border-radius: 50%;
+            opacity: 0.15;
+            bottom: -50px;
+            right: -50px;
+        }
+        .status-code {
+            font-size: 10rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 1rem;
+            background: linear-gradient(to right, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .status-text {
+            font-size: 2.5rem;
+            color: var(--light);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            animation: fadeInUp 0.8s ease 0.2s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        .desc {
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            font-size: 1.25rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            animation: fadeInUp 0.8s ease 0.4s forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">MyPortfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">回首頁</a></li>
+        </ul>
+    </nav>
+
+    <div class="status-hero">
+        <div class="hero-content">
+            <h1 class="status-code">403</h1>
+            <h2 class="status-text">Forbidden</h2>
+            <p class="desc">伺服器理解請求，但拒絕執行。您沒有權限存取該資源。</p>
+            <a href="index.html" class="btn">返回首頁</a>
+        </div>
+    </div>
+</body>
+</html>
